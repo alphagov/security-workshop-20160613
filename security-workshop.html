@@ -1,412 +1,412 @@
 <article role="article" class="slide" title="Slide 1">
-    <section class="slide-content" title="Slide content"><div><p>Jenny Duckett and Alex Muller<span><br>Government Digital Service<br>@</span><span>jenny_duckett, @alexmuller</span></p></div></section>
+    <div><p>Jenny Duckett and Alex Muller<span><br>Government Digital Service<br>@</span><span>jenny_duckett, @alexmuller</span></p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 2">
-    <section class="slide-content" title="Slide content"><div><p>A really broad overview of web security</p></div></section>
+    <div><p>A really broad overview of web security</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 3">
-    <section class="slide-content" title="Slide content"><div><p>This is an alpha</p></div></section>
+    <div><p>This is an alpha</p></div>
 
     <aside class="notes"><p>(so alpha it doesn’t even have a banner)</p><p>This is our first attempt at running a security workshop, so there’ll be lots which could be better - please ask lots of questions and give us feedback at any time</p><p>There’ll be a mini-retro at the end of the day to focus on this</p><p>Help us make the next one better!</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 4">
-    <section class="slide-content" title="Slide content"><div><p>Lots of us are new to GDS and we don’t all know each other yet...</p></div></section>
+    <div><p>Lots of us are new to GDS and we don’t all know each other yet...</p></div>
 
     <aside class="notes"><p>Get everyone to introduce themselves</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 5">
-    <section class="slide-content" title="Slide content"><div><p>Housekeeping and setup</p></div></section>
+    <div><p>Housekeeping and setup</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 6">
-    <section class="slide-content" title="Slide content"><div><p>Timings</p></div></section>
+    <div><p>Timings</p></div>
 
     <aside class="notes"><p>Mid-morning and mid-afternoon breaks, and lunch obvs</p><p>Mini-retro 20-30 mins at the end of the day</p><p>We’re aiming to spend lots of time on practical exercises, so if we’re talking too much then please tell us :)</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 7">
-    <section class="slide-content" title="Slide content"><div><p>RailsGoat is a deliberately vulnerable Rails app, with tests</p><p><a target="_blank" rel="noreferrer" href="https://github.com/alphagov/railsgoat/tree/virtualbox"><span>https://github.com/alphagov/railsgoat/tree/virtualbox</span></a></p></div></section>
+    <div><p>RailsGoat is a deliberately vulnerable Rails app, with tests</p><p><a target="_blank" rel="noreferrer" href="https://github.com/alphagov/railsgoat/tree/virtualbox"><span>https://github.com/alphagov/railsgoat/tree/virtualbox</span></a></p></div>
 
     <aside class="notes"><p>Fix the vulnerabilities to make the tests pass</p><p>We’ll be using it for most of the practical sessions today, and there’s lots more to explore in it</p><p>We’ve forked it and we’re using our virtualbox branch</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 8">
-    <section class="slide-content" title="Slide content"><div><p>What is security?</p></div></section>
+    <div><p>What is security?</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 9">
-    <section class="slide-content" title="Slide content"><div><p>What do we mean by web security?</p><p>​</p><p>What are the risks and possible consequences?</p></div></section>
+    <div><p>What do we mean by web security?</p><p>​</p><p>What are the risks and possible consequences?</p></div>
 
     <aside class="notes"><p>Discuss with the people on your table for a couple of minutes, then all together</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 10">
-    <section class="slide-content" title="Slide content"><div><p>We aren’t security experts</p></div></section>
+    <div><p>We aren’t security experts</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 11">
-    <section class="slide-content" title="Slide content"><div><p>Web security is a huge topic</p></div></section>
+    <div><p>Web security is a huge topic</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 12">
-    <section class="slide-content" title="Slide content"><div><p>...but understanding some general principles really helps</p></div></section>
+    <div><p>...but understanding some general principles really helps</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 13">
-    <section class="slide-content" title="Slide content"><div><p>These are ours:</p><ul><li value="1">Don’t trust user input, ever</li><li value="2">Browsers are a special environment</li><li value="3">Your frameworks and tools can help, but understand how to use them properly and their limitations</li><li value="4">Don’t do it yourself - use standard well-understood things instead</li></ul></div></section>
+    <div><p>These are ours:</p><ul><li value="1">Don’t trust user input, ever</li><li value="2">Browsers are a special environment</li><li value="3">Your frameworks and tools can help, but understand how to use them properly and their limitations</li><li value="4">Don’t do it yourself - use standard well-understood things instead</li></ul></div>
 
     <aside class="notes"><p>As we said, we aren’t experts, but we find these helpful for thinking about security</p><p>These are really high level</p><p>We’ll talk about these in more detail</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 14">
-    <section class="slide-content" title="Slide content"><div><p>There is one thing you need to know before we begin:</p><p>​</p><p>Computer Misuse Act 1990</p><p>​</p><p>Unauthorised access to computer material is punishable by 12 months imprisonment</p></div></section>
+    <div><p>There is one thing you need to know before we begin:</p><p>​</p><p>Computer Misuse Act 1990</p><p>​</p><p>Unauthorised access to computer material is punishable by 12 months imprisonment</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 15">
-    <section class="slide-content" title="Slide content"><div><p>Servers</p></div></section>
+    <div><p>Servers</p></div>
 
     <aside class="notes"><p>We’re dividing the day into two broad categories of stuff:</p><ul><li value="1">Morning: things that happen on servers</li><li value="2">Afternoon: things that happen in browsers</li></ul></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 16">
-    <section class="slide-content" title="Slide content"><div><p>Code injection</p></div></section>
+    <div><p>Code injection</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 17">
-    <section class="slide-content" title="Slide content"><div><p>Putting some code on the server and getting it to run</p><p>​</p><p>The code can come from any user input</p><p>​</p><p>It can damage anything running on the server</p></div></section>
+    <div><p>Putting some code on the server and getting it to run</p><p>​</p><p>The code can come from any user input</p><p>​</p><p>It can damage anything running on the server</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 18">
-    <section class="slide-content" title="Slide content"><div><p>SQL injection</p><p>​</p><p>'SELECT * FROM data WHERE foo='<span> + </span><span>'1; DROP TABLE users'</span><span> + </span>';'</p></div><div class="shape" title="https://imgs.xkcd.com/comics/exploits_of_a_mom.png"></div></section>
+    <div><p>SQL injection</p><p>​</p><p>'SELECT * FROM data WHERE foo='<span> + </span><span>'1; DROP TABLE users'</span><span> + </span>';'</p></div><div class="shape" title="https://imgs.xkcd.com/comics/exploits_of_a_mom.png"></div>
 
     <aside class="notes"><p><a target="_blank" rel="noreferrer" href="https://xkcd.com/327/"><span>https://xkcd.com/327/</span></a></p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 19">
-    <section class="slide-content" title="Slide content"><div><p>Remote code execution</p><p>​</p><p>ImageTragick (CVE-2016-3714)</p></div></section>
+    <div><p>Remote code execution</p><p>​</p><p>ImageTragick (CVE-2016-3714)</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 20">
-    <section class="slide-content" title="Slide content"><div><p>Practical stuff</p><p>​</p><ul><li value="1">SQL injection in analytics in Railsgoat</li><li value="2">ImageTragick</li></ul></div></section>
+    <div><p>Practical stuff</p><p>​</p><ul><li value="1">SQL injection in analytics in Railsgoat</li><li value="2">ImageTragick</li></ul></div>
 
     <aside class="notes"><p>SQL injection with Railsgoat: analytics page, as admin - try to get a list of all the users: http://localhost:3000/admin/1/analytics?ip=FOO&amp;field[*%20FROM%20users--]=true</p><p>​</p><p>Prevention: understand what Rails does against SQL injection and how to use it right, eg where with params or a string</p><p>Tools eg brakeman can help, but unless you’re running it regularly and seeing the output it doesn’t help…</p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23sql-injection"><span>http://edgeguides.rubyonrails.org/security.html#sql-injection</span></a></p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 21">
-    <section class="slide-content" title="Slide content"><div><p>“<span>We had thousands of hits in the first 15 minutes. We were at the top of hacker news, which a lot of people see. We were getting the word out on something tragickally simple to exploit. We'd do it again.”</span></p></div><div><p>https://imagetragick.com/</p></div><div class="shape" title="logo-medium.png"></div></section>
+    <div><p>“<span>We had thousands of hits in the first 15 minutes. We were at the top of hacker news, which a lot of people see. We were getting the word out on something tragickally simple to exploit. We'd do it again.”</span></p></div><div><p>https://imagetragick.com/</p></div><div class="shape" title="logo-medium.png"></div>
 
     <aside class="notes"><p>Few people took any notice of the first announcement until they made the website - name and logo were a joke originally but they immediately made it much more distinctive</p><p>People need to know a vulnerability exists before they can patch it, and marketing helps that</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 22">
-    <section class="slide-content" title="Slide content"><div><p>Authenticating users</p></div></section>
+    <div><p>Authenticating users</p></div>
 
     <aside class="notes"><p>If you want to play along with the demo in a few minutes, download the password-related files from the raspberry pi</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 23">
-    <section class="slide-content" title="Slide content"><div><p>Don’t build it yourself</p><p>(but the alternatives aren’t perfect either)</p></div></section>
+    <div><p>Don’t build it yourself</p><p>(but the alternatives aren’t perfect either)</p></div>
 
     <aside class="notes"><p>Crack an MD5 password</p><p>Discuss difference between hashing and encryption?</p><p>Salting passwords? What are you trying to gain by doing this? (time)</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 24">
-    <section class="slide-content" title="Slide content"><div><p>Hash passwords before storing them in your database</p><p>​</p><p>MD5, SHA-512, bcrypt</p></div></section>
+    <div><p>Hash passwords before storing them in your database</p><p>​</p><p>MD5, SHA-512, bcrypt</p></div>
 
     <aside class="notes"><p>Crack an MD5 password</p><p>Discuss difference between hashing and encryption?</p><p>Salting passwords? What are you trying to gain by doing this? (time)</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 25">
-    <section class="slide-content" title="Slide content"><div><p>Demo: use hashcat to crack some passwords</p><p>​</p><p>echo -n "taylorswift" | md5sum | cut -f1 -d" " &gt; /tmp/hash.txt</p><p>​</p><p>tar xvzf rockyou.tar.gz</p><p>chmod +x hashcat-cli64.app</p><p>​</p><p>./hashcat-cli64.app /tmp/hash.txt rockyou.txt</p></div></section>
+    <div><p>Demo: use hashcat to crack some passwords</p><p>​</p><p>echo -n "taylorswift" | md5sum | cut -f1 -d" " &gt; /tmp/hash.txt</p><p>​</p><p>tar xvzf rockyou.tar.gz</p><p>chmod +x hashcat-cli64.app</p><p>​</p><p>./hashcat-cli64.app /tmp/hash.txt rockyou.txt</p></div>
 
     <aside class="notes"><p>Crack an MD5 password</p><p>Discuss difference between hashing and encryption?</p><p>Salting passwords? What are you trying to gain by doing this? (time)</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 26">
-    <section class="slide-content" title="Slide content"><div><p>Devise session bug</p></div></section>
+    <div><p>Devise session bug</p></div>
 
     <aside class="notes"><p>Managing expiry of sessions is hard</p><p>There’s a lot of state to manage across many different actions that users can take - complex</p><p>​</p><p>When users report issues with authentication systems, take it seriously</p><p>Devise as an example of why you should keep dependencies up-to-date - most other things we’re talking about are possible via this vector</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 27">
-    <section class="slide-content" title="Slide content"><div><p>Check user input on every request</p></div></section>
+    <div><p>Check user input on every request</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 28">
-    <section class="slide-content" title="Slide content"><div><p>HTTP is stateless</p></div></section>
+    <div><p>HTTP is stateless</p></div>
 
     <aside class="notes"><p>Every request is entirely independent. There’s no such thing as being “authenticated” with HTTP. That’s what cookies are.</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 29">
-    <section class="slide-content" title="Slide content"><div><p>Changing params</p><p>​</p><p>Hiding a button isn’t enough</p></div></section>
+    <div><p>Changing params</p><p>​</p><p>Hiding a button isn’t enough</p></div>
 
     <aside class="notes"><p>Direct object references</p><p>Missing function-level access control</p><p>​</p><p>Specialist Publisher authorisation to publish manuals</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 30">
-    <section class="slide-content" title="Slide content"><div><p>Demo: authorisation to publish manuals in Specialist Publisher</p></div></section>
+    <div><p>Demo: authorisation to publish manuals in Specialist Publisher</p></div>
 
     <aside class="notes"><p>See traffic to publishing-api port in dev VM:</p><p>sudo ngrep -d lo . tcp port 3093</p><p>​</p><p>Before the fix:</p><p>git checkout 8fd0286eef97ec2db3cc789082f7a8a6cee78f1a</p><p>​</p><p>Demo after the fix in integration:</p><p><a target="_blank" rel="noreferrer" href="https://specialist-publisher.integration.publishing.service.gov.uk/manuals/2606097c-e82a-4f5d-920a-5f360dcff626"><span>https://specialist-publisher.integration.publishing.service.gov.uk/manuals/2606097c-e82a-4f5d-920a-5f360dcff626</span></a></p><p>Edit HTML to add Publish form</p><p>Get authenticity token out of another form on the same page</p><p>​</p><p>​</p><p>(With the fix:)</p><p>git checkout ee1f44dcbeec31f471ade4e05366a3d14215b320</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 31">
-    <section class="slide-content" title="Slide content"><div><p>https://github.com/alphagov/specialist-publisher/pull/444</p></div><div class="shape" title="Screen Shot 2016-06-12 at 21.20.48.png"></div></section>
+    <div><p>https://github.com/alphagov/specialist-publisher/pull/444</p></div><div class="shape" title="Screen Shot 2016-06-12 at 21.20.48.png"></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 32">
-    <section class="slide-content" title="Slide content"><div><p>https://twitter.com/edent/status/732889877705072640</p></div><div class="shape" title="Screen Shot 2016-06-11 at 23.29.46.png"></div></section>
+    <div><p>https://twitter.com/edent/status/732889877705072640</p></div><div class="shape" title="Screen Shot 2016-06-11 at 23.29.46.png"></div>
 
     <aside class="notes"><p>Open redirects - @edent</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/147530/"><span>http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/147530/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/118376/"><span>http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/118376/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115473/"><span>http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115473/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115469/"><span>http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115469/</span></a></p><p>​</p><p>Bypassing spam filters in emails to send people to a different site that might have another vulnerability</p><p>​</p><p>Real use-case of redirect from query params: <a target="_blank" rel="noreferrer" href="https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8%3D%25E2%259C%2593%26type%3Darchive%26path_contains%3Dhtm"><span>https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8=%E2%9C%93&amp;type=archive&amp;path_contains=htm</span></a></p><p>​</p><p>Unvalidated redirect in Railsgoat admin login - fix it</p><p>Rails doesn’t help you with this!</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 33">
-    <section class="slide-content" title="Slide content"><div><p>Don’t trust user input - check every time!</p></div></section>
+    <div><p>Don’t trust user input - check every time!</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 34">
-    <section class="slide-content" title="Slide content"><div><p>Proper configuration</p></div></section>
+    <div><p>Proper configuration</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 35">
-    <section class="slide-content" title="Slide content"><div><p>Make sure your application is configured correctly in production</p><p>​</p><p>For example, Rails has a development mode that shows stack traces</p><p>​</p><p>Don’t show stack traces to people</p></div></section>
+    <div><p>Make sure your application is configured correctly in production</p><p>​</p><p>For example, Rails has a development mode that shows stack traces</p><p>​</p><p>Don’t show stack traces to people</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 36">
-    <section class="slide-content" title="Slide content"><div class="shape" title="Screen Shot 2016-06-12 at 20.25.43.png"></div></section>
+    <div class="shape" title="Screen Shot 2016-06-12 at 20.25.43.png"></div>
 
     <aside class="notes"><p>Most GOV.UK applications log exceptions to Errbit, along with lots of information about the request to help us debug problems</p><p>That includes the params, which for signon can include passwords and 2SV codes - the code is filtered here</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 37">
-    <section class="slide-content" title="Slide content"><div><p>https://github.gds/gds/alphagov-deployment/pull/920</p></div><div class="shape" title="Screen Shot 2016-06-12 at 20.30.01.png"></div></section>
+    <div><p>https://github.gds/gds/alphagov-deployment/pull/920</p></div><div class="shape" title="Screen Shot 2016-06-12 at 20.30.01.png"></div>
 
     <aside class="notes"><p>Airbrake (the gem which apps use to interact with Errbit) filters params named password and password_confirmation by default, but Devise also uses current_password when your password expires and you have to reset it</p><p>If the reset fails the old one might still valid enough to allow someone else to log in, and it will have been sent to Errbit unless you add it to params_filters</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 38">
-    <section class="slide-content" title="Slide content"><div><p>Applications should be served over a secure connection</p><p>​</p><p>We’re going to login to a demo app over HTTP and watch the traffic</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://dodgy-login.herokuapp.com/"><span>http://dodgy-login.herokuapp.com/</span></a></p></div></section>
+    <div><p>Applications should be served over a secure connection</p><p>​</p><p>We’re going to login to a demo app over HTTP and watch the traffic</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://dodgy-login.herokuapp.com/"><span>http://dodgy-login.herokuapp.com/</span></a></p></div>
 
     <aside class="notes"><p>bob demoing tcpdump and wireshark</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 39">
-    <section class="slide-content" title="Slide content"><div><p>Lunch!</p></div></section>
+    <div><p>Lunch!</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 40">
-    <section class="slide-content" title="Slide content"><div><p>Web browsers</p></div></section>
+    <div><p>Web browsers</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 41">
-    <section class="slide-content" title="Slide content"><div><p>What does a browser do?</p></div></section>
+    <div><p>What does a browser do?</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 42">
-    <section class="slide-content" title="Slide content"><div><p>Cookies (this is why you need to do authentication properly)</p><p>​</p><p>People don’t pay attention (this is why phishing attacks work)</p><p>​</p><p>From the server’s point of view, the browser is the user</p></div></section>
+    <div><p>Cookies (this is why you need to do authentication properly)</p><p>​</p><p>People don’t pay attention (this is why phishing attacks work)</p><p>​</p><p>From the server’s point of view, the browser is the user</p></div>
 
     <aside class="notes"><p>The browser is an agent for the user</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 43">
-    <section class="slide-content" title="Slide content"><div><p>Lots of bad things can happen in a browser</p></div></section>
+    <div><p>Lots of bad things can happen in a browser</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 44">
-    <section class="slide-content" title="Slide content"><div><p>Cross-site scripting (XSS)</p></div></section>
+    <div><p>Cross-site scripting (XSS)</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 45">
-    <section class="slide-content" title="Slide content"><div><p>It’s useful to think of this as JavaScript injection</p></div></section>
+    <div><p>It’s useful to think of this as JavaScript injection</p></div>
 
     <aside class="notes"><p>XSS isn’t the clearest name for this to us</p><p>It covers getting any kind of unintended JS to run in someone else’s browser</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 46">
-    <section class="slide-content" title="Slide content"><div><p>Two types of XSS:</p><ul><li value="1">stored</li><li value="2">reflected</li></ul><p>​</p><p>This happens when you take user input and render it without escaping it correctly</p></div></section>
+    <div><p>Two types of XSS:</p><ul><li value="1">stored</li><li value="2">reflected</li></ul><p>​</p><p>This happens when you take user input and render it without escaping it correctly</p></div>
 
     <aside class="notes"><p>Don’t trust user input, remember :)</p><p>Publishing apps could be victims of stored XSS - we have to sanitize input to prevent it</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 47">
-    <section class="slide-content" title="Slide content"><div><p>This has happened on GOV.UK</p><p>​</p><p><a target="_blank" rel="noreferrer" href="https://github.com/alphagov/finder-frontend/pull/91"><span>alphagov/finder-frontend #91</span></a></p><p>​</p><p><a target="_blank" rel="noreferrer" href="https://www-origin.integration.publishing.service.gov.uk/aaib-reports"><span>https://www-origin.integration.publishing.service.gov.uk/aaib-reports</span></a></p></div></section>
+    <div><p>This has happened on GOV.UK</p><p>​</p><p><a target="_blank" rel="noreferrer" href="https://github.com/alphagov/finder-frontend/pull/91"><span>alphagov/finder-frontend #91</span></a></p><p>​</p><p><a target="_blank" rel="noreferrer" href="https://www-origin.integration.publishing.service.gov.uk/aaib-reports"><span>https://www-origin.integration.publishing.service.gov.uk/aaib-reports</span></a></p></div>
 
     <aside class="notes"><p>Deploy old branch temporarily to integration</p><p>Get a bit of actually dangerous JS to use instead of just alert - send cookies to our logging app?</p><p>​</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 48">
-    <section class="slide-content" title="Slide content"><div><p>Cross-site request forgery (CSRF)</p></div></section>
+    <div><p>Cross-site request forgery (CSRF)</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 49">
-    <section class="slide-content" title="Slide content"><div><p>A user on another website is tricked into making a request against your website</p><p>​</p><p>The malicious request has access to your site’s cookies so it’s “authenticated”</p></div></section>
+    <div><p>A user on another website is tricked into making a request against your website</p><p>​</p><p>The malicious request has access to your site’s cookies so it’s “authenticated”</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 50">
-    <section class="slide-content" title="Slide content"><div><p>Practical: be the victim of a CSRF attack in Railsgoat (and fix it)</p></div></section>
+    <div><p>Practical: be the victim of a CSRF attack in Railsgoat (and fix it)</p></div>
 
     <aside class="notes"><p>Log in to railsgoat as a normal user</p><p>Use <a target="_blank" rel="noreferrer" href="http://raspberrypi.local/csrf_form.html"><span>http://raspberrypi.local/csrf_form.html</span></a></p><p>Adds events to user’s calendar</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 51">
-    <section class="slide-content" title="Slide content"><div><p>Rails doesn’t check authenticity tokens for GET requests because you shouldn’t be using GET requests for dangerous things</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"><span>http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html</span></a></p></div></section>
+    <div><p>Rails doesn’t check authenticity tokens for GET requests because you shouldn’t be using GET requests for dangerous things</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"><span>http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html</span></a></p></div>
 
     <aside class="notes"><p>Do HTTP right</p><p>img tags with GET</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 52">
-    <section class="slide-content" title="Slide content"><div><p>Headers can help us</p></div></section>
+    <div><p>Headers can help us</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 53">
-    <section class="slide-content" title="Slide content"><div><p>Same-origin policy</p><p>​</p><p>The browser won’t let a site make an HTTP request to another origin</p><p>​</p><p>Unless the site has cross-origin resource sharing (CORS) configured</p></div></section>
+    <div><p>Same-origin policy</p><p>​</p><p>The browser won’t let a site make an HTTP request to another origin</p><p>​</p><p>Unless the site has cross-origin resource sharing (CORS) configured</p></div>
 
     <aside class="notes"><p>Cookies:</p><ul><li value="1">HttpOnly</li><li value="2">Secure</li><li value="3">SameSite (draft RFC)</li></ul></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 54">
-    <section class="slide-content" title="Slide content"><div><p>Practical: write some JavaScript to try and get the CSRF token from a Signon form </p><p>​</p><p>Then do the same thing with the</p><p>GitHub API.</p><p>​</p><p>See the difference?</p></div></section>
+    <div><p>Practical: write some JavaScript to try and get the CSRF token from a Signon form </p><p>​</p><p>Then do the same thing with the</p><p>GitHub API.</p><p>​</p><p>See the difference?</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 55">
-    <section class="slide-content" title="Slide content"><div><p>Man-in-the-middle attacks</p><p>​</p><p>Somebody is intercepting your web traffic</p><p>​</p><p>HTTP strict transport security (HSTS)</p><p>​</p><p>HTTP public key pinning (HPKP)</p></div></section>
+    <div><p>Man-in-the-middle attacks</p><p>​</p><p>Somebody is intercepting your web traffic</p><p>​</p><p>HTTP strict transport security (HSTS)</p><p>​</p><p>HTTP public key pinning (HPKP)</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 56">
-    <section class="slide-content" title="Slide content"><div><p>Social engineering</p></div></section>
+    <div><p>Social engineering</p></div>
 
     <aside class="notes"><p>This is a thing</p><p>Not all attacks rely only on technical capabilities</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 57">
-    <section class="slide-content" title="Slide content"><div><p>People are fallible</p></div></section>
+    <div><p>People are fallible</p></div>
 
     <aside class="notes"><p>Users can be tricked easily - phishing</p><p>Developers make mistakes</p><p>Privileged users or anyone with higher levels of access are more likely to be targeted</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 58">
-    <section class="slide-content" title="Slide content"><div><p><a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v%3DbjYhmX_OUQQ"><span>https://www.youtube.com/watch?v=bjYhmX_OUQQ</span></a></p></div></section>
+    <div><p><a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v%3DbjYhmX_OUQQ"><span>https://www.youtube.com/watch?v=bjYhmX_OUQQ</span></a></p></div>
 
     <aside class="notes"><p>Jessica Clark using crying baby video to get control of a journalist’s account</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 59">
-    <section class="slide-content" title="Slide content"><div><p>Chaining vulnerabilities</p></div></section>
+    <div><p>Chaining vulnerabilities</p></div>
 
     <aside class="notes"><p>This makes any of these vulnerabilities much more dangerous (and interesting!)</p><p>A vulnerability which on its own would have only a small impact can let you escalate to exploit another one which wouldn’t have been possible on its own</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 60">
-    <section class="slide-content" title="Slide content"><div><p>Session fixation</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23session-fixation"><span>http://edgeguides.rubyonrails.org/security.html#session-fixation</span></a></p><p>​</p></div></section>
+    <div><p>Session fixation</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23session-fixation"><span>http://edgeguides.rubyonrails.org/security.html#session-fixation</span></a></p><p>​</p></div>
 
     <aside class="notes"><p>Instead of trying to get a user’s already-authenticated session cookie, force them to use a session you already have access to and get them to authenticate it for you</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 61">
-    <section class="slide-content" title="Slide content"><div><p>&lt;script&gt;</p><p>document.cookie="_session_id=16d5b78abb28e3d6206b60f22a03c8d9";</p><p>&lt;/script&gt;</p></div><div class="shape" title="session_fixation.png"></div></section>
+    <div><p>&lt;script&gt;</p><p>document.cookie="_session_id=16d5b78abb28e3d6206b60f22a03c8d9";</p><p>&lt;/script&gt;</p></div><div class="shape" title="session_fixation.png"></div>
 
     <aside class="notes"><p>The “XSS” to fix the session doesn’t rely on cross-site requests - just setting the cookie for the current page, JS injection</p><p>The mitigation for this is to expire the user’s session when they login and logout and give them a new session, which the attacker doesn’t have access to - Devise does this for you</p><p>Also you can delete sessions from the database a short time after they were created - this gives the attacker less time to exploit the attack</p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 62">
-    <section class="slide-content" title="Slide content"><div><p>What other examples can we come up with?</p></div></section>
+    <div><p>What other examples can we come up with?</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 63">
-    <section class="slide-content" title="Slide content"><div><p>Other interesting things</p></div></section>
+    <div><p>Other interesting things</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 64">
-    <section class="slide-content" title="Slide content"><div><p>Timing attacks</p><p>​</p><p>Draft RFC on same-site cookies</p><p>​</p><p>Twitter credit card thing</p></div></section>
+    <div><p>Timing attacks</p><p>​</p><p>Draft RFC on same-site cookies</p><p>​</p><p>Twitter credit card thing</p></div>
 
     <aside class="notes"><p><a target="_blank" rel="noreferrer" href="https://twitter.com/ejcx_/status/736187259905396740"><span>https://twitter.com/ejcx_/status/736187259905396740</span></a></p><p><a target="_blank" rel="noreferrer" href="https://tools.ietf.org/html/draft-west-first-party-cookies-07"><span>https://tools.ietf.org/html/draft-west-first-party-cookies-07</span></a></p><p>Supported in Chrome 51: <a target="_blank" rel="noreferrer" href="https://www.chromestatus.com/feature/4672634709082112"><span>https://www.chromestatus.com/feature/4672634709082112</span></a></p><p>​</p><p><a target="_blank" rel="noreferrer" href="https://hackerone.com/reports/27404"><span>https://hackerone.com/reports/27404</span></a><span> (thanks David for pointing this out)</span></p></aside>
 </article>
 
 
 <article role="article" class="slide" title="Slide 65">
-    <section class="slide-content" title="Slide content"><div><p>Further reading</p></div></section>
+    <div><p>Further reading</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 66">
-    <section class="slide-content" title="Slide content"><div><p><a target="_blank" rel="noreferrer" href="https://www.happybearsoftware.com/lrug-web-app-security-talk"><span>Najaf Ali’s LRUG talk</span></a></p><p><a target="_blank" rel="noreferrer" href="https://www.owasp.org/index.php/Top_10_2013-Top_10"><span>OWASP Top 10</span></a></p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html"><span>Rails security guide</span></a></p><p>netstat, ngrep, <a target="_blank" rel="noreferrer" href="http://jvns.ca/blog/2016/03/17/tcpdump-is-amazing/"><span>tcpdump</span></a>, wireshark</p><p><a target="_blank" rel="noreferrer" href="http://jvns.ca/"><span>Julia Evans’ blog</span></a></p><p><a target="_blank" rel="noreferrer" href="https://www.hacksplaining.com"><span>www.hacksplaining.com</span></a></p></div></section>
+    <div><p><a target="_blank" rel="noreferrer" href="https://www.happybearsoftware.com/lrug-web-app-security-talk"><span>Najaf Ali’s LRUG talk</span></a></p><p><a target="_blank" rel="noreferrer" href="https://www.owasp.org/index.php/Top_10_2013-Top_10"><span>OWASP Top 10</span></a></p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html"><span>Rails security guide</span></a></p><p>netstat, ngrep, <a target="_blank" rel="noreferrer" href="http://jvns.ca/blog/2016/03/17/tcpdump-is-amazing/"><span>tcpdump</span></a>, wireshark</p><p><a target="_blank" rel="noreferrer" href="http://jvns.ca/"><span>Julia Evans’ blog</span></a></p><p><a target="_blank" rel="noreferrer" href="https://www.hacksplaining.com"><span>www.hacksplaining.com</span></a></p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 67">
-    <section class="slide-content" title="Slide content"><div><p>Retrospective</p></div></section>
+    <div><p>Retrospective</p></div>
 </article>
 
 
 <article role="article" class="slide" title="Slide 68">
-    <section class="slide-content" title="Slide content"><div><p>Thanks!</p><p>​</p><p>Jenny Duckett and Alex Muller<span><br>@jenny_duckett, @alexmuller</span></p></div></section>
+    <div><p>Thanks!</p><p>​</p><p>Jenny Duckett and Alex Muller<span><br>@jenny_duckett, @alexmuller</span></p></div>
 </article>
 
 
