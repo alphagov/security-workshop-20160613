@@ -130,8 +130,11 @@
 </section>
 
 
-<section title="Slide 18">
-    <div><p>SQL injection</p><p>​</p><p>'SELECT * FROM data WHERE foo='<span> + </span><span>'1; DROP TABLE users'</span><span> + </span>';'</p></div><div class="shape" title="https://imgs.xkcd.com/comics/exploits_of_a_mom.png"></div>
+<section title="Slide 18" data-background-image="images/xkcd-327-exploits_of_a_mom.png"
+                                 data-background-repeat="no-repeat"
+                                 data-background-size="24em auto"
+                                 data-background-position="bottom 1em">
+    <div style="height: 5em;"><p>SQL injection</p><p><span style="color: blue;">'SELECT * FROM data WHERE foo='</span><span> + </span><span style="color: red;">'1; DROP TABLE users'</span><span> + </span><span style="color: blue;">';'</span></p></div>
 
     <aside class="notes"><p><a target="_blank" rel="noreferrer" href="https://xkcd.com/327/"><span>https://xkcd.com/327/</span></a></p></aside>
 </section>
@@ -149,8 +152,11 @@
 </section>
 
 
-<section title="Slide 21">
-    <div><p>“<span>We had thousands of hits in the first 15 minutes. We were at the top of hacker news, which a lot of people see. We were getting the word out on something tragickally simple to exploit. We'd do it again.”</span></p></div><div><p>https://imagetragick.com/</p></div><div class="shape" title="logo-medium.png"></div>
+<section title="Slide 21" data-background-image="images/imagetragick-logo-medium.png"
+                                 data-background-repeat="no-repeat"
+                                 data-background-size="12em auto"
+                                 data-background-position="right 2em">
+    <div style="width: 26em;"><p>“We had thousands of hits in the first 15 minutes. We were at the top of hacker news, which a lot of people see. We were getting the word out on something tragickally simple to exploit. We'd do it again.”</p></div><div><p>https://imagetragick.com</p></div>
 
     <aside class="notes"><p>Few people took any notice of the first announcement until they made the website - name and logo were a joke originally but they immediately made it much more distinctive</p><p>People need to know a vulnerability exists before they can patch it, and marketing helps that</p></aside>
 </section>
@@ -217,15 +223,18 @@
 </section>
 
 
-<section title="Slide 31">
-    <div><p>https://github.com/alphagov/specialist-publisher/pull/444</p></div><div class="shape" title="Screen Shot 2016-06-12 at 21.20.48.png"></div>
+<section title="Slide 31" data-background-image="images/specialist-publisher-authorization-fix.png"
+                            data-background-size="100% auto;">
+
+    <aside class="notes">https://github.com/alphagov/specialist-publisher/pull/444</aside>
 </section>
 
 
-<section title="Slide 32">
-    <div><p>https://twitter.com/edent/status/732889877705072640</p></div><div class="shape" title="Screen Shot 2016-06-11 at 23.29.46.png"></div>
+<section title="Slide 32" data-background-image="images/edent-open-redirect.png">
 
-    <aside class="notes"><p>Open redirects - @edent</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/147530/"><span>http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/147530/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/118376/"><span>http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/118376/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115473/"><span>http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115473/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115469/"><span>http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115469/</span></a></p><p>​</p><p>Bypassing spam filters in emails to send people to a different site that might have another vulnerability</p><p>​</p><p>Real use-case of redirect from query params: <a target="_blank" rel="noreferrer" href="https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8%3D%25E2%259C%2593%26type%3Darchive%26path_contains%3Dhtm"><span>https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8=%E2%9C%93&amp;type=archive&amp;path_contains=htm</span></a></p><p>​</p><p>Unvalidated redirect in Railsgoat admin login - fix it</p><p>Rails doesn’t help you with this!</p></aside>
+    <aside class="notes">
+        https://twitter.com/edent/status/732889877705072640
+        <p>Open redirects - @edent</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/147530/"><span>http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/147530/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/118376/"><span>http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/118376/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115473/"><span>http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115473/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115469/"><span>http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115469/</span></a></p><p>​</p><p>Bypassing spam filters in emails to send people to a different site that might have another vulnerability</p><p>​</p><p>Real use-case of redirect from query params: <a target="_blank" rel="noreferrer" href="https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8%3D%25E2%259C%2593%26type%3Darchive%26path_contains%3Dhtm"><span>https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8=%E2%9C%93&amp;type=archive&amp;path_contains=htm</span></a></p><p>​</p><p>Unvalidated redirect in Railsgoat admin login - fix it</p><p>Rails doesn’t help you with this!</p></aside>
 </section>
 
 
@@ -244,17 +253,20 @@
 </section>
 
 
-<section title="Slide 36">
-    <div class="shape" title="Screen Shot 2016-06-12 at 20.25.43.png"></div>
+<section title="Slide 36" data-background-image="images/signon-errbit.png">
 
-    <aside class="notes"><p>Most GOV.UK applications log exceptions to Errbit, along with lots of information about the request to help us debug problems</p><p>That includes the params, which for signon can include passwords and 2SV codes - the code is filtered here</p></aside>
+    <aside class="notes">
+        <p>Most GOV.UK applications log exceptions to Errbit, along with lots of information about the request to help us debug problems</p><p>That includes the params, which for signon can include passwords and 2SV codes - the code is filtered here</p>
+    </aside>
 </section>
 
 
-<section title="Slide 37">
-    <div><p>https://github.gds/gds/alphagov-deployment/pull/920</p></div><div class="shape" title="Screen Shot 2016-06-12 at 20.30.01.png"></div>
+<section title="Slide 37" data-background-image="images/signon-errbit-params-filter-fix.png">
 
-    <aside class="notes"><p>Airbrake (the gem which apps use to interact with Errbit) filters params named password and password_confirmation by default, but Devise also uses current_password when your password expires and you have to reset it</p><p>If the reset fails the old one might still valid enough to allow someone else to log in, and it will have been sent to Errbit unless you add it to params_filters</p></aside>
+    <aside class="notes">
+        https://github.gds/gds/alphagov-deployment/pull/920
+        <p>Airbrake (the gem which apps use to interact with Errbit) filters params named password and password_confirmation by default, but Devise also uses current_password when your password expires and you have to reset it</p><p>If the reset fails the old one might still valid enough to allow someone else to log in, and it will have been sent to Errbit unless you add it to params_filters</p>
+    </aside>
 </section>
 
 
@@ -399,8 +411,11 @@
 </section>
 
 
-<section title="Slide 61">
-    <div><p>&lt;script&gt;</p><p>document.cookie="_session_id=16d5b78abb28e3d6206b60f22a03c8d9";</p><p>&lt;/script&gt;</p></div><div class="shape" title="session_fixation.png"></div>
+<section title="Slide 61" data-background-image="images/session_fixation.png"
+                                 data-background-repeat="no-repeat"
+                                 data-background-size="16em auto"
+                                 data-background-position="right 2em top">
+    <div><p>&lt;script&gt;</p><p style="width: 10em;">document.cookie= "_session_id=16d5b78abb28e3d6206b60f22a03c8d9";</p><p>&lt;/script&gt;</p></div>
 
     <aside class="notes"><p>The “XSS” to fix the session doesn’t rely on cross-site requests - just setting the cookie for the current page, JS injection</p><p>The mitigation for this is to expire the user’s session when they login and logout and give them a new session, which the attacker doesn’t have access to - Devise does this for you</p><p>Also you can delete sessions from the database a short time after they were created - this gives the attacker less time to exploit the attack</p></aside>
 </section>
