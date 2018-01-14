@@ -105,7 +105,15 @@
 
 
 <section>
-    <div><p>These are ours:</p><ul><li value="1">Don’t trust user input, ever</li><li value="2">Browsers are a special environment</li><li value="3">Your frameworks and tools can help, but understand how to use them properly and their limitations</li><li value="4">Don’t do it yourself - use standard well-understood things instead</li></ul></div>
+    <div>
+        <p class="long-text">These are ours:</p>
+        <ul>
+            <li class="long-text" value="1">Don’t trust user input, ever</li>
+            <li class="long-text" value="2">Browsers are a special environment</li>
+            <li class="long-text" value="3">Your frameworks and tools can help, but understand how to use them properly and their limitations</li>
+            <li class="long-text" value="4">Don’t do it yourself - use standard well-understood things instead</li>
+        </ul>
+    </div>
 
     <aside class="notes"><p>As we said, we aren’t experts, but we find these helpful for thinking about security</p><p>These are really high level</p><p>We’ll talk about these in more detail</p></aside>
 </section>
@@ -150,7 +158,13 @@
 
 
 <section>
-    <div><p>Practical stuff</p><ul><li value="1">SQL injection in analytics in Railsgoat</li><li value="2">ImageTragick</li></ul></div>
+    <div>
+        <p>Practical stuff:</p>
+        <ul>
+            <li value="1">SQL injection in analytics in Railsgoat</li>
+            <li value="2">ImageTragick</li>
+        </ul>
+    </div>
 
     <aside class="notes"><p>SQL injection with Railsgoat: analytics page, as admin - try to get a list of all the users: http://localhost:3000/admin/1/analytics?ip=FOO&amp;field[*%20FROM%20users--]=true</p><p>Prevention: understand what Rails does against SQL injection and how to use it right, eg where with params or a string</p><p>Tools eg brakeman can help, but unless you’re running it regularly and seeing the output it doesn’t help…</p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23sql-injection"><span>http://edgeguides.rubyonrails.org/security.html#sql-injection</span></a></p></aside>
 </section>
@@ -360,12 +374,12 @@
 
 <section>
     <div>
-        <p>Two types of XSS:</p>
+        <p class="long-text">Two types of XSS:</p>
         <ul>
-            <li value="1">stored</li>
-            <li value="2">reflected</li>
+            <li class="long-text" value="1">stored</li>
+            <li class="long-text" value="2">reflected</li>
         </ul>
-        <p>This happens when you take user input and render it without escaping it correctly</p>
+        <p class="long-text">This happens when you take user input and render it without escaping it correctly</p>
     </div>
 
     <aside class="notes"><p>Don’t trust user input, remember :)</p><p>Publishing apps could be victims of stored XSS - we have to sanitize input to prevent it</p></aside>
