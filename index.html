@@ -80,7 +80,7 @@
 
 
 <section title="Slide 9">
-    <div><p>What do we mean by web security?</p><p>​</p><p>What are the risks and possible consequences?</p></div>
+    <div><p>What do we mean by web security?</p><p>What are the risks and possible consequences?</p></div>
 
     <aside class="notes"><p>Discuss with the people on your table for a couple of minutes, then all together</p></aside>
 </section>
@@ -142,14 +142,14 @@
 
 
 <section title="Slide 19">
-    <div><p>Remote code execution</p><p>​</p><p>ImageTragick (CVE-2016-3714)</p></div>
+    <div><p>Remote code execution</p><p>ImageTragick (CVE-2016-3714)</p></div>
 </section>
 
 
 <section title="Slide 20">
-    <div><p>Practical stuff</p><p>​</p><ul><li value="1">SQL injection in analytics in Railsgoat</li><li value="2">ImageTragick</li></ul></div>
+    <div><p>Practical stuff</p><ul><li value="1">SQL injection in analytics in Railsgoat</li><li value="2">ImageTragick</li></ul></div>
 
-    <aside class="notes"><p>SQL injection with Railsgoat: analytics page, as admin - try to get a list of all the users: http://localhost:3000/admin/1/analytics?ip=FOO&amp;field[*%20FROM%20users--]=true</p><p>​</p><p>Prevention: understand what Rails does against SQL injection and how to use it right, eg where with params or a string</p><p>Tools eg brakeman can help, but unless you’re running it regularly and seeing the output it doesn’t help…</p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23sql-injection"><span>http://edgeguides.rubyonrails.org/security.html#sql-injection</span></a></p></aside>
+    <aside class="notes"><p>SQL injection with Railsgoat: analytics page, as admin - try to get a list of all the users: http://localhost:3000/admin/1/analytics?ip=FOO&amp;field[*%20FROM%20users--]=true</p><p>Prevention: understand what Rails does against SQL injection and how to use it right, eg where with params or a string</p><p>Tools eg brakeman can help, but unless you’re running it regularly and seeing the output it doesn’t help…</p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23sql-injection"><span>http://edgeguides.rubyonrails.org/security.html#sql-injection</span></a></p></aside>
 </section>
 
 
@@ -179,14 +179,14 @@
 
 
 <section title="Slide 24">
-    <div><p>Hash passwords before storing them in your database</p><p>​</p><p>MD5, SHA-512, bcrypt</p></div>
+    <div><p>Hash passwords before storing them in your database</p><p>MD5, SHA-512, bcrypt</p></div>
 
     <aside class="notes"><p>Crack an MD5 password</p><p>Discuss difference between hashing and encryption?</p><p>Salting passwords? What are you trying to gain by doing this? (time)</p></aside>
 </section>
 
 
 <section title="Slide 25">
-    <div><p>Demo: use hashcat to crack some passwords</p><p>​</p><p>echo -n "taylorswift" | md5sum | cut -f1 -d" " &gt; /tmp/hash.txt</p><p>​</p><p>tar xvzf rockyou.tar.gz</p><p>chmod +x hashcat-cli64.app</p><p>​</p><p>./hashcat-cli64.app /tmp/hash.txt rockyou.txt</p></div>
+    <div><p>Demo: use hashcat to crack some passwords</p><p>echo -n "taylorswift" | md5sum | cut -f1 -d" " &gt; /tmp/hash.txt</p><p>tar xvzf rockyou.tar.gz</p><p>chmod +x hashcat-cli64.app</p><p>./hashcat-cli64.app /tmp/hash.txt rockyou.txt</p></div>
 
     <aside class="notes"><p>Crack an MD5 password</p><p>Discuss difference between hashing and encryption?</p><p>Salting passwords? What are you trying to gain by doing this? (time)</p></aside>
 </section>
@@ -195,7 +195,7 @@
 <section title="Slide 26">
     <div><p>Devise session bug</p></div>
 
-    <aside class="notes"><p>Managing expiry of sessions is hard</p><p>There’s a lot of state to manage across many different actions that users can take - complex</p><p>​</p><p>When users report issues with authentication systems, take it seriously</p><p>Devise as an example of why you should keep dependencies up-to-date - most other things we’re talking about are possible via this vector</p></aside>
+    <aside class="notes"><p>Managing expiry of sessions is hard</p><p>There’s a lot of state to manage across many different actions that users can take - complex</p><p>When users report issues with authentication systems, take it seriously</p><p>Devise as an example of why you should keep dependencies up-to-date - most other things we’re talking about are possible via this vector</p></aside>
 </section>
 
 
@@ -212,16 +212,16 @@
 
 
 <section title="Slide 29">
-    <div><p>Changing params</p><p>​</p><p>Hiding a button isn’t enough</p></div>
+    <div><p>Changing params</p><p>Hiding a button isn’t enough</p></div>
 
-    <aside class="notes"><p>Direct object references</p><p>Missing function-level access control</p><p>​</p><p>Specialist Publisher authorisation to publish manuals</p></aside>
+    <aside class="notes"><p>Direct object references</p><p>Missing function-level access control</p><p>Specialist Publisher authorisation to publish manuals</p></aside>
 </section>
 
 
 <section title="Slide 30">
     <div><p>Demo: authorisation to publish manuals in Specialist Publisher</p></div>
 
-    <aside class="notes"><p>See traffic to publishing-api port in dev VM:</p><p>sudo ngrep -d lo . tcp port 3093</p><p>​</p><p>Before the fix:</p><p>git checkout 8fd0286eef97ec2db3cc789082f7a8a6cee78f1a</p><p>​</p><p>Demo after the fix in integration:</p><p><a target="_blank" rel="noreferrer" href="https://specialist-publisher.integration.publishing.service.gov.uk/manuals/2606097c-e82a-4f5d-920a-5f360dcff626"><span>https://specialist-publisher.integration.publishing.service.gov.uk/manuals/2606097c-e82a-4f5d-920a-5f360dcff626</span></a></p><p>Edit HTML to add Publish form</p><p>Get authenticity token out of another form on the same page</p><p>​</p><p>​</p><p>(With the fix:)</p><p>git checkout ee1f44dcbeec31f471ade4e05366a3d14215b320</p></aside>
+    <aside class="notes"><p>See traffic to publishing-api port in dev VM:</p><p>sudo ngrep -d lo . tcp port 3093</p><p>Before the fix:</p><p>git checkout 8fd0286eef97ec2db3cc789082f7a8a6cee78f1a</p><p>Demo after the fix in integration:</p><p><a target="_blank" rel="noreferrer" href="https://specialist-publisher.integration.publishing.service.gov.uk/manuals/2606097c-e82a-4f5d-920a-5f360dcff626"><span>https://specialist-publisher.integration.publishing.service.gov.uk/manuals/2606097c-e82a-4f5d-920a-5f360dcff626</span></a></p><p>Edit HTML to add Publish form</p><p>Get authenticity token out of another form on the same page</p><p>(With the fix:)</p><p>git checkout ee1f44dcbeec31f471ade4e05366a3d14215b320</p></aside>
 </section>
 
 
@@ -239,7 +239,7 @@
 
     <aside class="notes">
         https://twitter.com/edent/status/732889877705072640
-        <p>Open redirects - @edent</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/147530/"><span>http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/147530/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/118376/"><span>http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/118376/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115473/"><span>http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115473/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115469/"><span>http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115469/</span></a></p><p>​</p><p>Bypassing spam filters in emails to send people to a different site that might have another vulnerability</p><p>​</p><p>Real use-case of redirect from query params: <a target="_blank" rel="noreferrer" href="https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8%3D%25E2%259C%2593%26type%3Darchive%26path_contains%3Dhtm"><span>https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8=%E2%9C%93&amp;type=archive&amp;path_contains=htm</span></a></p><p>​</p><p>Unvalidated redirect in Railsgoat admin login - fix it</p><p>Rails doesn’t help you with this!</p></aside>
+        <p>Open redirects - @edent</p><p><a target="_blank" rel="noreferrer" href="http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/147530/"><span>http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/147530/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/118376/"><span>http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/118376/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115473/"><span>http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115473/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115469/"><span>http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115469/</span></a></p><p>Bypassing spam filters in emails to send people to a different site that might have another vulnerability</p><p>Real use-case of redirect from query params: <a target="_blank" rel="noreferrer" href="https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8%3D%25E2%259C%2593%26type%3Darchive%26path_contains%3Dhtm"><span>https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8=%E2%9C%93&amp;type=archive&amp;path_contains=htm</span></a></p><p>Unvalidated redirect in Railsgoat admin login - fix it</p><p>Rails doesn’t help you with this!</p></aside>
 </section>
 
 
@@ -254,7 +254,7 @@
 
 
 <section title="Slide 35">
-    <div><p>Make sure your application is configured correctly in production</p><p>​</p><p>For example, Rails has a development mode that shows stack traces</p><p>​</p><p>Don’t show stack traces to people</p></div>
+    <div><p>Make sure your application is configured correctly in production</p><p>For example, Rails has a development mode that shows stack traces</p><p>Don’t show stack traces to people</p></div>
 </section>
 
 
@@ -280,7 +280,7 @@
 
 
 <section title="Slide 38">
-    <div><p>Applications should be served over a secure connection</p><p>​</p><p>We’re going to login to a demo app over HTTP and watch the traffic</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://dodgy-login.herokuapp.com/"><span>http://dodgy-login.herokuapp.com/</span></a></p></div>
+    <div><p>Applications should be served over a secure connection</p><p>We’re going to login to a demo app over HTTP and watch the traffic</p><p><a target="_blank" rel="noreferrer" href="http://dodgy-login.herokuapp.com/"><span>http://dodgy-login.herokuapp.com/</span></a></p></div>
 
     <aside class="notes"><p>bob demoing tcpdump and wireshark</p></aside>
 </section>
@@ -302,7 +302,7 @@
 
 
 <section title="Slide 42">
-    <div><p>Cookies (this is why you need to do authentication properly)</p><p>​</p><p>People don’t pay attention (this is why phishing attacks work)</p><p>​</p><p>From the server’s point of view, the browser is the user</p></div>
+    <div><p>Cookies (this is why you need to do authentication properly)</p><p>People don’t pay attention (this is why phishing attacks work)</p><p>From the server’s point of view, the browser is the user</p></div>
 
     <aside class="notes"><p>The browser is an agent for the user</p></aside>
 </section>
@@ -326,16 +326,16 @@
 
 
 <section title="Slide 46">
-    <div><p>Two types of XSS:</p><ul><li value="1">stored</li><li value="2">reflected</li></ul><p>​</p><p>This happens when you take user input and render it without escaping it correctly</p></div>
+    <div><p>Two types of XSS:</p><ul><li value="1">stored</li><li value="2">reflected</li></ul><p>This happens when you take user input and render it without escaping it correctly</p></div>
 
     <aside class="notes"><p>Don’t trust user input, remember :)</p><p>Publishing apps could be victims of stored XSS - we have to sanitize input to prevent it</p></aside>
 </section>
 
 
 <section title="Slide 47">
-    <div><p>This has happened on GOV.UK</p><p>​</p><p><a target="_blank" rel="noreferrer" href="https://github.com/alphagov/finder-frontend/pull/91"><span>alphagov/finder-frontend #91</span></a></p><p>​</p><p><a target="_blank" rel="noreferrer" href="https://www-origin.integration.publishing.service.gov.uk/aaib-reports"><span>https://www-origin.integration.publishing.service.gov.uk/aaib-reports</span></a></p></div>
+    <div><p>This has happened on GOV.UK</p><p><a target="_blank" rel="noreferrer" href="https://github.com/alphagov/finder-frontend/pull/91"><span>alphagov/finder-frontend #91</span></a></p><p><a target="_blank" rel="noreferrer" href="https://www-origin.integration.publishing.service.gov.uk/aaib-reports"><span>https://www-origin.integration.publishing.service.gov.uk/aaib-reports</span></a></p></div>
 
-    <aside class="notes"><p>Deploy old branch temporarily to integration</p><p>Get a bit of actually dangerous JS to use instead of just alert - send cookies to our logging app?</p><p>​</p></aside>
+    <aside class="notes"><p>Deploy old branch temporarily to integration</p><p>Get a bit of actually dangerous JS to use instead of just alert - send cookies to our logging app?</p></aside>
 </section>
 
 
@@ -345,7 +345,7 @@
 
 
 <section title="Slide 49">
-    <div><p>A user on another website is tricked into making a request against your website</p><p>​</p><p>The malicious request has access to your site’s cookies so it’s “authenticated”</p></div>
+    <div><p>A user on another website is tricked into making a request against your website</p><p>The malicious request has access to your site’s cookies so it’s “authenticated”</p></div>
 </section>
 
 
@@ -357,7 +357,7 @@
 
 
 <section title="Slide 51">
-    <div><p>Rails doesn’t check authenticity tokens for GET requests because you shouldn’t be using GET requests for dangerous things</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"><span>http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html</span></a></p></div>
+    <div><p>Rails doesn’t check authenticity tokens for GET requests because you shouldn’t be using GET requests for dangerous things</p><p><a target="_blank" rel="noreferrer" href="http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"><span>http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html</span></a></p></div>
 
     <aside class="notes"><p>Do HTTP right</p><p>img tags with GET</p></aside>
 </section>
@@ -369,19 +369,19 @@
 
 
 <section title="Slide 53">
-    <div><p>Same-origin policy</p><p>​</p><p>The browser won’t let a site make an HTTP request to another origin</p><p>​</p><p>Unless the site has cross-origin resource sharing (CORS) configured</p></div>
+    <div><p>Same-origin policy</p><p>The browser won’t let a site make an HTTP request to another origin</p><p>Unless the site has cross-origin resource sharing (CORS) configured</p></div>
 
     <aside class="notes"><p>Cookies:</p><ul><li value="1">HttpOnly</li><li value="2">Secure</li><li value="3">SameSite (draft RFC)</li></ul></aside>
 </section>
 
 
 <section title="Slide 54">
-    <div><p>Practical: write some JavaScript to try and get the CSRF token from a Signon form </p><p>​</p><p>Then do the same thing with the</p><p>GitHub API.</p><p>​</p><p>See the difference?</p></div>
+    <div><p>Practical: write some JavaScript to try and get the CSRF token from a Signon form </p><p>Then do the same thing with the</p><p>GitHub API.</p><p>See the difference?</p></div>
 </section>
 
 
 <section title="Slide 55">
-    <div><p>Man-in-the-middle attacks</p><p>​</p><p>Somebody is intercepting your web traffic</p><p>​</p><p>HTTP strict transport security (HSTS)</p><p>​</p><p>HTTP public key pinning (HPKP)</p></div>
+    <div><p>Man-in-the-middle attacks</p><p>Somebody is intercepting your web traffic</p><p>HTTP strict transport security (HSTS)</p><p>HTTP public key pinning (HPKP)</p></div>
 </section>
 
 
@@ -414,7 +414,7 @@
 
 
 <section title="Slide 60">
-    <div><p>Session fixation</p><p>​</p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23session-fixation"><span>http://edgeguides.rubyonrails.org/security.html#session-fixation</span></a></p><p>​</p></div>
+    <div><p>Session fixation</p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23session-fixation"><span>http://edgeguides.rubyonrails.org/security.html#session-fixation</span></a></p></div>
 
     <aside class="notes"><p>Instead of trying to get a user’s already-authenticated session cookie, force them to use a session you already have access to and get them to authenticate it for you</p></aside>
 </section>
@@ -441,9 +441,9 @@
 
 
 <section title="Slide 64">
-    <div><p>Timing attacks</p><p>​</p><p>Draft RFC on same-site cookies</p><p>​</p><p>Twitter credit card thing</p></div>
+    <div><p>Timing attacks</p><p>Draft RFC on same-site cookies</p><p>Twitter credit card thing</p></div>
 
-    <aside class="notes"><p><a target="_blank" rel="noreferrer" href="https://twitter.com/ejcx_/status/736187259905396740"><span>https://twitter.com/ejcx_/status/736187259905396740</span></a></p><p><a target="_blank" rel="noreferrer" href="https://tools.ietf.org/html/draft-west-first-party-cookies-07"><span>https://tools.ietf.org/html/draft-west-first-party-cookies-07</span></a></p><p>Supported in Chrome 51: <a target="_blank" rel="noreferrer" href="https://www.chromestatus.com/feature/4672634709082112"><span>https://www.chromestatus.com/feature/4672634709082112</span></a></p><p>​</p><p><a target="_blank" rel="noreferrer" href="https://hackerone.com/reports/27404"><span>https://hackerone.com/reports/27404</span></a><span> (thanks David for pointing this out)</span></p></aside>
+    <aside class="notes"><p><a target="_blank" rel="noreferrer" href="https://twitter.com/ejcx_/status/736187259905396740"><span>https://twitter.com/ejcx_/status/736187259905396740</span></a></p><p><a target="_blank" rel="noreferrer" href="https://tools.ietf.org/html/draft-west-first-party-cookies-07"><span>https://tools.ietf.org/html/draft-west-first-party-cookies-07</span></a></p><p>Supported in Chrome 51: <a target="_blank" rel="noreferrer" href="https://www.chromestatus.com/feature/4672634709082112"><span>https://www.chromestatus.com/feature/4672634709082112</span></a></p><p><a target="_blank" rel="noreferrer" href="https://hackerone.com/reports/27404"><span>https://hackerone.com/reports/27404</span></a><span> (thanks David for pointing this out)</span></p></aside>
 </section>
 
 
