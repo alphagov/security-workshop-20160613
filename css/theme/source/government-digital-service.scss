@@ -98,6 +98,9 @@ blockquote {
     .heading.present ~ footer {
         display: none;
     }
+    .no-footer.present ~ footer {
+        display: none;
+    }
 
     .intro, .outro {
         height: 80%;
