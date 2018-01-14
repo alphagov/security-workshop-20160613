@@ -331,7 +331,11 @@
 
 
 <section>
-    <div><p>Cookies (this is why you need to do authentication properly)</p><p>People don’t pay attention (this is why phishing attacks work)</p><p>From the server’s point of view, the browser is the user</p></div>
+    <div>
+        <p class="long-text">Cookies (this is why you need to do authentication properly)</p>
+        <p class="long-text">People don’t pay attention (this is why phishing attacks work)</p>
+        <p class="long-text">From the server’s point of view, the browser is the user</p>
+    </div>
 
     <aside class="notes"><p>The browser is an agent for the user</p></aside>
 </section>
@@ -355,14 +359,25 @@
 
 
 <section>
-    <div><p>Two types of XSS:</p><ul><li value="1">stored</li><li value="2">reflected</li></ul><p>This happens when you take user input and render it without escaping it correctly</p></div>
+    <div>
+        <p>Two types of XSS:</p>
+        <ul>
+            <li value="1">stored</li>
+            <li value="2">reflected</li>
+        </ul>
+        <p>This happens when you take user input and render it without escaping it correctly</p>
+    </div>
 
     <aside class="notes"><p>Don’t trust user input, remember :)</p><p>Publishing apps could be victims of stored XSS - we have to sanitize input to prevent it</p></aside>
 </section>
 
 
 <section>
-    <div><p>This has happened on GOV.UK</p><p><a target="_blank" rel="noreferrer" href="https://github.com/alphagov/finder-frontend/pull/91"><span>alphagov/finder-frontend #91</span></a></p><p><a target="_blank" rel="noreferrer" href="https://www-origin.integration.publishing.service.gov.uk/aaib-reports"><span>https://www-origin.integration.publishing.service.gov.uk/aaib-reports</span></a></p></div>
+    <div>
+        <p class="long-text">This has happened on GOV.UK</p>
+        <p class="long-text"><a target="_blank" rel="noreferrer" href="https://github.com/alphagov/finder-frontend/pull/91"><span>alphagov/finder-frontend #91</span></a></p>
+        <p class="long-text"><a target="_blank" rel="noreferrer" href="https://www-origin.integration.publishing.service.gov.uk/aaib-reports"><span>https://www-origin.integration.publishing.service.gov.uk/aaib-reports</span></a></p>
+    </div>
 
     <aside class="notes"><p>Deploy old branch temporarily to integration</p><p>Get a bit of actually dangerous JS to use instead of just alert - send cookies to our logging app?</p></aside>
 </section>
@@ -374,7 +389,10 @@
 
 
 <section>
-    <div><p>A user on another website is tricked into making a request against your website</p><p>The malicious request has access to your site’s cookies so it’s “authenticated”</p></div>
+    <div>
+        <p class="long-text">A user on another website is tricked into making a request against your website</p>
+        <p class="long-text">The malicious request has access to your site’s cookies so it’s “authenticated”</p>
+    </div>
 </section>
 
 
@@ -386,7 +404,10 @@
 
 
 <section>
-    <div><p>Rails doesn’t check authenticity tokens for GET requests because you shouldn’t be using GET requests for dangerous things</p><p><a target="_blank" rel="noreferrer" href="http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"><span>http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html</span></a></p></div>
+    <div>
+        <p class="long-text" style="width: 20em;">Rails doesn’t check authenticity tokens for GET requests because you shouldn’t be using GET requests for dangerous things</p>
+        <p class="long-text"><a target="_blank" rel="noreferrer" href="http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"><span>http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html</span></a></p>
+    </div>
 
     <aside class="notes"><p>Do HTTP right</p><p>img tags with GET</p></aside>
 </section>
@@ -398,14 +419,20 @@
 
 
 <section>
-    <div><p>Same-origin policy</p><p>The browser won’t let a site make an HTTP request to another origin</p><p>Unless the site has cross-origin resource sharing (CORS) configured</p></div>
+    <div>
+        <p>Same-origin policy</p>
+        <p class="long-text">The browser won’t let a site make an HTTP request to another origin unless the site has cross-origin resource sharing (CORS) configured</p>
+    </div>
 
     <aside class="notes"><p>Cookies:</p><ul><li value="1">HttpOnly</li><li value="2">Secure</li><li value="3">SameSite (draft RFC)</li></ul></aside>
 </section>
 
 
 <section>
-    <div><p>Practical: write some JavaScript to try and get the CSRF token from a Signon form </p><p>Then do the same thing with the</p><p>GitHub API.</p><p>See the difference?</p></div>
+    <div>
+        <p class="long-text">Practical: write some JavaScript to try and get the CSRF token from a Signon form </p>
+        <p class="long-text">Then do the same thing with the GitHub API. See the difference?</p>
+    </div>
 </section>
 
 
@@ -497,7 +524,14 @@
 
 
 <section>
-    <div><p><a target="_blank" rel="noreferrer" href="https://www.happybearsoftware.com/lrug-web-app-security-talk"><span>Najaf Ali’s LRUG talk</span></a></p><p><a target="_blank" rel="noreferrer" href="https://www.owasp.org/index.php/Top_10_2013-Top_10"><span>OWASP Top 10</span></a></p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html"><span>Rails security guide</span></a></p><p>netstat, ngrep, <a target="_blank" rel="noreferrer" href="http://jvns.ca/blog/2016/03/17/tcpdump-is-amazing/"><span>tcpdump</span></a>, wireshark</p><p><a target="_blank" rel="noreferrer" href="http://jvns.ca/"><span>Julia Evans’ blog</span></a></p><p><a target="_blank" rel="noreferrer" href="https://www.hacksplaining.com"><span>www.hacksplaining.com</span></a></p></div>
+    <div>
+        <p class="long-text"><a target="_blank" rel="noreferrer" href="https://www.happybearsoftware.com/lrug-web-app-security-talk"><span>Najaf Ali’s LRUG talk</span></a></p>
+        <p class="long-text"><a target="_blank" rel="noreferrer" href="https://www.owasp.org/index.php/Top_10_2013-Top_10"><span>OWASP Top 10</span></a></p>
+        <p class="long-text"><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html"><span>Rails security guide</span></a></p>
+        <p class="long-text">netstat, ngrep, <a target="_blank" rel="noreferrer" href="http://jvns.ca/blog/2016/03/17/tcpdump-is-amazing/"><span>tcpdump</span></a>, wireshark</p>
+        <p class="long-text"><a target="_blank" rel="noreferrer" href="http://jvns.ca/"><span>Julia Evans’ blog</span></a></p>
+        <p class="long-text"><a target="_blank" rel="noreferrer" href="https://www.hacksplaining.com"><span>www.hacksplaining.com</span></a></p>
+    </div>
 </section>
 
 
