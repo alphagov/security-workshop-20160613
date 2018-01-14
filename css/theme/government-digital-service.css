@@ -285,7 +285,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
     font-size: 1.6em; }
   .reveal .slides .long-text {
     font-size: 1.2em; }
-  .reveal .slides .sql {
+  .reveal .slides .code-sample {
     font-size: 0.9em;
     font-family: monospace; }
   .reveal .slides section {

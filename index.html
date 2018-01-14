@@ -133,7 +133,7 @@
 <section title="Slide 18">
     <div>
         <p>SQL injection</p>
-        <p class="sql"><span style="color: #891EC6;">'SELECT * FROM data WHERE foo='</span><span> + </span><span style="color: #B83115;">'1; DROP TABLE users'</span><span> + </span><span style="color: #891EC6;">';'</span></p>
+        <p class="code-sample"><span style="color: #891EC6;">'SELECT * FROM data WHERE foo='</span><span> + </span><span style="color: #B83115;">'1; DROP TABLE users'</span><span> + </span><span style="color: #891EC6;">';'</span></p>
     </div>
     <img src="images/xkcd-327-exploits_of_a_mom.png" style="margin-bottom: 5em; border: 0; width: 80%">
 
@@ -186,7 +186,13 @@
 
 
 <section title="Slide 25">
-    <div><p>Demo: use hashcat to crack some passwords</p><p>echo -n "taylorswift" | md5sum | cut -f1 -d" " &gt; /tmp/hash.txt</p><p>tar xvzf rockyou.tar.gz</p><p>chmod +x hashcat-cli64.app</p><p>./hashcat-cli64.app /tmp/hash.txt rockyou.txt</p></div>
+    <div>
+        <p class="long-text">Demo: use hashcat to crack some passwords</p>
+        <p class="code-sample">echo -n "taylorswift" | md5sum | cut -f1 -d" " &gt; /tmp/hash.txt</p>
+        <p class="code-sample">tar xvzf rockyou.tar.gz</p>
+        <p class="code-sample">chmod +x hashcat-cli64.app</p>
+        <p class="code-sample">./hashcat-cli64.app /tmp/hash.txt rockyou.txt</p>
+    </div>
 
     <aside class="notes"><p>Crack an MD5 password</p><p>Discuss difference between hashing and encryption?</p><p>Salting passwords? What are you trying to gain by doing this? (time)</p></aside>
 </section>
@@ -424,7 +430,11 @@
                                  data-background-repeat="no-repeat"
                                  data-background-size="16em auto"
                                  data-background-position="right 2em top">
-    <div><p>&lt;script&gt;</p><p style="width: 10em;">document.cookie= "_session_id=16d5b78abb28e3d6206b60f22a03c8d9";</p><p>&lt;/script&gt;</p></div>
+    <div>
+        <p class="code-sample">&lt;script&gt;</p>
+        <p class="code-sample" style="width: 16em; word-wrap: break-word;">document.cookie ="_session_id=16d5b78a2a03c8d9";</p>
+        <p class="code-sample">&lt;/script&gt;</p>
+    </div>
 
     <aside class="notes"><p>The “XSS” to fix the session doesn’t rely on cross-site requests - just setting the cookie for the current page, JS injection</p><p>The mitigation for this is to expire the user’s session when they login and logout and give them a new session, which the attacker doesn’t have access to - Devise does this for you</p><p>Also you can delete sessions from the database a short time after they were created - this gives the attacker less time to exploit the attack</p></aside>
 </section>
