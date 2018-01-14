@@ -25,112 +25,115 @@
 
 
 
-<section title="Slide 1" class="intro"
-                         data-background-image="images/cabinet-office-logo.png"
-                         data-background-repeat="no-repeat"
-                         data-background-size="auto auto"
-                         data-background-position="1.8em 3.2em">
+<section class="intro"
+            data-background-image="images/cabinet-office-logo.png"
+            data-background-repeat="no-repeat"
+            data-background-size="auto auto"
+            data-background-position="1.8em 3.2em">
     <p><strong>Jenny Duckett and Alex Muller</strong></p>
     <p>Government Digital Service</p>
     <p>@jenny_duckett, @alexmuller</p>
 </section>
 
 
-<section title="Slide 2" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>A really broad overview of web security</h1></div>
 </section>
 
 
-<section title="Slide 3">
+<section>
     <div><p>This is an alpha</p></div>
 
     <aside class="notes"><p>(so alpha it doesn’t even have a banner)</p><p>This is our first attempt at running a security workshop, so there’ll be lots which could be better - please ask lots of questions and give us feedback at any time</p><p>There’ll be a mini-retro at the end of the day to focus on this</p><p>Help us make the next one better!</p></aside>
 </section>
 
 
-<section title="Slide 4">
+<section>
     <div><p>Lots of us are new to GDS and we don’t all know each other yet...</p></div>
 
     <aside class="notes"><p>Get everyone to introduce themselves</p></aside>
 </section>
 
 
-<section title="Slide 5" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Housekeeping and setup</h1></div>
 </section>
 
 
-<section title="Slide 6">
+<section>
     <div><p>Timings</p></div>
 
     <aside class="notes"><p>Mid-morning and mid-afternoon breaks, and lunch obvs</p><p>Mini-retro 20-30 mins at the end of the day</p><p>We’re aiming to spend lots of time on practical exercises, so if we’re talking too much then please tell us :)</p></aside>
 </section>
 
 
-<section title="Slide 7">
-    <div><p>RailsGoat is a deliberately vulnerable Rails app, with tests</p><p><a target="_blank" rel="noreferrer" href="https://github.com/alphagov/railsgoat/tree/virtualbox"><span>https://github.com/alphagov/railsgoat/tree/virtualbox</span></a></p></div>
+<section>
+    <div>
+        <p class="long-text">RailsGoat is a deliberately vulnerable Rails app, with tests</p>
+        <p class="long-text"><a target="_blank" rel="noreferrer" href="https://github.com/alphagov/railsgoat/tree/virtualbox"><span>https://github.com/alphagov/railsgoat/tree/virtualbox</span></a></p>
+    </div>
 
     <aside class="notes"><p>Fix the vulnerabilities to make the tests pass</p><p>We’ll be using it for most of the practical sessions today, and there’s lots more to explore in it</p><p>We’ve forked it and we’re using our virtualbox branch</p></aside>
 </section>
 
 
-<section title="Slide 8" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>What is security?</h1></div>
 </section>
 
 
-<section title="Slide 9">
+<section>
     <div><p>What do we mean by web security?</p><p>What are the risks and possible consequences?</p></div>
 
     <aside class="notes"><p>Discuss with the people on your table for a couple of minutes, then all together</p></aside>
 </section>
 
 
-<section title="Slide 10">
+<section>
     <div><p>We aren’t security experts</p></div>
 </section>
 
 
-<section title="Slide 11">
+<section>
     <div><p>Web security is a huge topic</p></div>
 </section>
 
 
-<section title="Slide 12">
+<section>
     <div><p>...but understanding some general principles really helps</p></div>
 </section>
 
 
-<section title="Slide 13">
+<section>
     <div><p>These are ours:</p><ul><li value="1">Don’t trust user input, ever</li><li value="2">Browsers are a special environment</li><li value="3">Your frameworks and tools can help, but understand how to use them properly and their limitations</li><li value="4">Don’t do it yourself - use standard well-understood things instead</li></ul></div>
 
     <aside class="notes"><p>As we said, we aren’t experts, but we find these helpful for thinking about security</p><p>These are really high level</p><p>We’ll talk about these in more detail</p></aside>
 </section>
 
 
-<section title="Slide 14">
+<section>
     <div><p class="long-text">There is one thing you need to know before we begin:</p><p class="long-text">Computer Misuse Act 1990</p><p class="long-text">Unauthorised access to computer material is punishable by 12 months imprisonment</p></div>
 </section>
 
 
-<section title="Slide 15" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Servers</h1></div>
 
     <aside class="notes"><p>We’re dividing the day into two broad categories of stuff:</p><ul><li value="1">Morning: things that happen on servers</li><li value="2">Afternoon: things that happen in browsers</li></ul></aside>
 </section>
 
 
-<section title="Slide 16" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Code injection</h1></div>
 </section>
 
 
-<section title="Slide 17">
+<section>
     <div><p class="long-text">Putting some code on the server and getting it to run</p><p class="long-text">The code can come from any user input</p><p class="long-text">It can damage anything running on the server</p></div>
 </section>
 
 
-<section title="Slide 18">
+<section>
     <div>
         <p>SQL injection</p>
         <p class="code-sample"><span style="color: #891EC6;">'SELECT * FROM data WHERE foo='</span><span> + </span><span style="color: #B83115;">'1; DROP TABLE users'</span><span> + </span><span style="color: #891EC6;">';'</span></p>
@@ -141,22 +144,22 @@
 </section>
 
 
-<section title="Slide 19">
+<section>
     <div><p>Remote code execution</p><p>ImageTragick (CVE-2016-3714)</p></div>
 </section>
 
 
-<section title="Slide 20">
+<section>
     <div><p>Practical stuff</p><ul><li value="1">SQL injection in analytics in Railsgoat</li><li value="2">ImageTragick</li></ul></div>
 
     <aside class="notes"><p>SQL injection with Railsgoat: analytics page, as admin - try to get a list of all the users: http://localhost:3000/admin/1/analytics?ip=FOO&amp;field[*%20FROM%20users--]=true</p><p>Prevention: understand what Rails does against SQL injection and how to use it right, eg where with params or a string</p><p>Tools eg brakeman can help, but unless you’re running it regularly and seeing the output it doesn’t help…</p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23sql-injection"><span>http://edgeguides.rubyonrails.org/security.html#sql-injection</span></a></p></aside>
 </section>
 
 
-<section title="Slide 21" data-background-image="images/imagetragick-logo-medium.png"
-                                 data-background-repeat="no-repeat"
-                                 data-background-size="10em auto"
-                                 data-background-position="right 1em top 1em">
+<section data-background-image="images/imagetragick-logo-medium.png"
+            data-background-repeat="no-repeat"
+            data-background-size="10em auto"
+            data-background-position="right 1em top 1em">
     <div style="width: 18em;"><p class="long-text">“We had thousands of hits in the first 15 minutes. We were at the top of hacker news, which a lot of people see. We were getting the word out on something tragickally simple to exploit. We'd do it again.”</p>
     <p class="long-text">https://imagetragick.com</p></div>
 
@@ -164,28 +167,28 @@
 </section>
 
 
-<section title="Slide 22" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Authenticating users</h1></div>
 
     <aside class="notes"><p>If you want to play along with the demo in a few minutes, download the password-related files from the raspberry pi</p></aside>
 </section>
 
 
-<section title="Slide 23">
+<section>
     <div><p>Don’t build it yourself</p><p>(but the alternatives aren’t perfect either)</p></div>
 
     <aside class="notes"><p>Crack an MD5 password</p><p>Discuss difference between hashing and encryption?</p><p>Salting passwords? What are you trying to gain by doing this? (time)</p></aside>
 </section>
 
 
-<section title="Slide 24">
+<section>
     <div><p>Hash passwords before storing them in your database</p><p>MD5, SHA-512, bcrypt</p></div>
 
     <aside class="notes"><p>Crack an MD5 password</p><p>Discuss difference between hashing and encryption?</p><p>Salting passwords? What are you trying to gain by doing this? (time)</p></aside>
 </section>
 
 
-<section title="Slide 25">
+<section>
     <div>
         <p class="long-text">Demo: use hashcat to crack some passwords</p>
         <p class="code-sample">echo -n "taylorswift" | md5sum | cut -f1 -d" " &gt; /tmp/hash.txt</p>
@@ -198,50 +201,50 @@
 </section>
 
 
-<section title="Slide 26">
+<section>
     <div><p>Devise session bug</p></div>
 
     <aside class="notes"><p>Managing expiry of sessions is hard</p><p>There’s a lot of state to manage across many different actions that users can take - complex</p><p>When users report issues with authentication systems, take it seriously</p><p>Devise as an example of why you should keep dependencies up-to-date - most other things we’re talking about are possible via this vector</p></aside>
 </section>
 
 
-<section title="Slide 27" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Check user input on every request</h1></div>
 </section>
 
 
-<section title="Slide 28">
+<section>
     <div><p>HTTP is stateless</p></div>
 
     <aside class="notes"><p>Every request is entirely independent. There’s no such thing as being “authenticated” with HTTP. That’s what cookies are.</p></aside>
 </section>
 
 
-<section title="Slide 29">
+<section>
     <div><p>Changing params</p><p>Hiding a button isn’t enough</p></div>
 
     <aside class="notes"><p>Direct object references</p><p>Missing function-level access control</p><p>Specialist Publisher authorisation to publish manuals</p></aside>
 </section>
 
 
-<section title="Slide 30">
+<section>
     <div><p>Demo: authorisation to publish manuals in Specialist Publisher</p></div>
 
     <aside class="notes"><p>See traffic to publishing-api port in dev VM:</p><p>sudo ngrep -d lo . tcp port 3093</p><p>Before the fix:</p><p>git checkout 8fd0286eef97ec2db3cc789082f7a8a6cee78f1a</p><p>Demo after the fix in integration:</p><p><a target="_blank" rel="noreferrer" href="https://specialist-publisher.integration.publishing.service.gov.uk/manuals/2606097c-e82a-4f5d-920a-5f360dcff626"><span>https://specialist-publisher.integration.publishing.service.gov.uk/manuals/2606097c-e82a-4f5d-920a-5f360dcff626</span></a></p><p>Edit HTML to add Publish form</p><p>Get authenticity token out of another form on the same page</p><p>(With the fix:)</p><p>git checkout ee1f44dcbeec31f471ade4e05366a3d14215b320</p></aside>
 </section>
 
 
-<section title="Slide 31" class="no-footer"
-                          data-background-image="images/specialist-publisher-authorization-fix.png"
-                          data-background-size="contain"
-                          data-background-color="white">
+<section class="no-footer"
+            data-background-image="images/specialist-publisher-authorization-fix.png"
+            data-background-size="contain"
+            data-background-color="white">
 
     <aside class="notes">https://github.com/alphagov/specialist-publisher/pull/444</aside>
 </section>
 
 
-<section title="Slide 32" class="no-footer"
-                          data-background-image="images/edent-open-redirect.png">
+<section class="no-footer"
+            data-background-image="images/edent-open-redirect.png">
 
     <aside class="notes">
         https://twitter.com/edent/status/732889877705072640
@@ -249,23 +252,26 @@
 </section>
 
 
-<section title="Slide 33">
+<section>
     <div><p>Don’t trust user input - check every time!</p></div>
 </section>
 
 
-<section title="Slide 34" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Proper configuration</h1></div>
 </section>
 
 
-<section title="Slide 35">
-    <div><p>Make sure your application is configured correctly in production</p><p>For example, Rails has a development mode that shows stack traces</p><p>Don’t show stack traces to people</p></div>
+<section>
+    <div>
+        <p>Make sure your application is configured correctly in production</p>
+        <p>For example, Rails has a development mode that shows stack traces</p>
+        <p>Don’t show stack traces to people</p></div>
 </section>
 
 
-<section title="Slide 36" class="no-footer"
-                          data-background-image="images/signon-errbit.png">
+<section class="no-footer"
+            data-background-image="images/signon-errbit.png">
 
     <aside class="notes">
         <p>Most GOV.UK applications log exceptions to Errbit, along with lots of information about the request to help us debug problems</p><p>That includes the params, which for signon can include passwords and 2SV codes - the code is filtered here</p>
@@ -273,10 +279,10 @@
 </section>
 
 
-<section title="Slide 37" class="no-footer"
-                          data-background-image="images/signon-errbit-params-filter-fix.png"
-                          data-background-size="contain"
-                          data-background-color="white">
+<section class="no-footer"
+            data-background-image="images/signon-errbit-params-filter-fix.png"
+            data-background-size="contain"
+            data-background-color="white">
 
     <aside class="notes">
         https://github.gds/gds/alphagov-deployment/pull/920
@@ -285,151 +291,151 @@
 </section>
 
 
-<section title="Slide 38">
+<section>
     <div><p>Applications should be served over a secure connection</p><p>We’re going to login to a demo app over HTTP and watch the traffic</p><p><a target="_blank" rel="noreferrer" href="http://dodgy-login.herokuapp.com/"><span>http://dodgy-login.herokuapp.com/</span></a></p></div>
 
     <aside class="notes"><p>bob demoing tcpdump and wireshark</p></aside>
 </section>
 
 
-<section title="Slide 39" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Lunch!</h1></div>
 </section>
 
 
-<section title="Slide 40" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Web browsers</h1></div>
 </section>
 
 
-<section title="Slide 41" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>What does a browser do?</h1></div>
 </section>
 
 
-<section title="Slide 42">
+<section>
     <div><p>Cookies (this is why you need to do authentication properly)</p><p>People don’t pay attention (this is why phishing attacks work)</p><p>From the server’s point of view, the browser is the user</p></div>
 
     <aside class="notes"><p>The browser is an agent for the user</p></aside>
 </section>
 
 
-<section title="Slide 43" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Lots of bad things can happen in a browser</h1></div>
 </section>
 
 
-<section title="Slide 44" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Cross-site scripting (XSS)</h1></div>
 </section>
 
 
-<section title="Slide 45">
+<section>
     <div><p>It’s useful to think of this as JavaScript injection</p></div>
 
     <aside class="notes"><p>XSS isn’t the clearest name for this to us</p><p>It covers getting any kind of unintended JS to run in someone else’s browser</p></aside>
 </section>
 
 
-<section title="Slide 46">
+<section>
     <div><p>Two types of XSS:</p><ul><li value="1">stored</li><li value="2">reflected</li></ul><p>This happens when you take user input and render it without escaping it correctly</p></div>
 
     <aside class="notes"><p>Don’t trust user input, remember :)</p><p>Publishing apps could be victims of stored XSS - we have to sanitize input to prevent it</p></aside>
 </section>
 
 
-<section title="Slide 47">
+<section>
     <div><p>This has happened on GOV.UK</p><p><a target="_blank" rel="noreferrer" href="https://github.com/alphagov/finder-frontend/pull/91"><span>alphagov/finder-frontend #91</span></a></p><p><a target="_blank" rel="noreferrer" href="https://www-origin.integration.publishing.service.gov.uk/aaib-reports"><span>https://www-origin.integration.publishing.service.gov.uk/aaib-reports</span></a></p></div>
 
     <aside class="notes"><p>Deploy old branch temporarily to integration</p><p>Get a bit of actually dangerous JS to use instead of just alert - send cookies to our logging app?</p></aside>
 </section>
 
 
-<section title="Slide 48" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Cross-site request forgery (CSRF)</h1></div>
 </section>
 
 
-<section title="Slide 49">
+<section>
     <div><p>A user on another website is tricked into making a request against your website</p><p>The malicious request has access to your site’s cookies so it’s “authenticated”</p></div>
 </section>
 
 
-<section title="Slide 50">
+<section>
     <div><p>Practical: be the victim of a CSRF attack in Railsgoat (and fix it)</p></div>
 
     <aside class="notes"><p>Log in to railsgoat as a normal user</p><p>Use <a target="_blank" rel="noreferrer" href="http://raspberrypi.local/csrf_form.html"><span>http://raspberrypi.local/csrf_form.html</span></a></p><p>Adds events to user’s calendar</p></aside>
 </section>
 
 
-<section title="Slide 51">
+<section>
     <div><p>Rails doesn’t check authenticity tokens for GET requests because you shouldn’t be using GET requests for dangerous things</p><p><a target="_blank" rel="noreferrer" href="http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"><span>http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html</span></a></p></div>
 
     <aside class="notes"><p>Do HTTP right</p><p>img tags with GET</p></aside>
 </section>
 
 
-<section title="Slide 52" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Headers can help us</h1></div>
 </section>
 
 
-<section title="Slide 53">
+<section>
     <div><p>Same-origin policy</p><p>The browser won’t let a site make an HTTP request to another origin</p><p>Unless the site has cross-origin resource sharing (CORS) configured</p></div>
 
     <aside class="notes"><p>Cookies:</p><ul><li value="1">HttpOnly</li><li value="2">Secure</li><li value="3">SameSite (draft RFC)</li></ul></aside>
 </section>
 
 
-<section title="Slide 54">
+<section>
     <div><p>Practical: write some JavaScript to try and get the CSRF token from a Signon form </p><p>Then do the same thing with the</p><p>GitHub API.</p><p>See the difference?</p></div>
 </section>
 
 
-<section title="Slide 55">
+<section>
     <div><p>Man-in-the-middle attacks</p><p>Somebody is intercepting your web traffic</p><p>HTTP strict transport security (HSTS)</p><p>HTTP public key pinning (HPKP)</p></div>
 </section>
 
 
-<section title="Slide 56" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Social engineering</h1></div>
 
     <aside class="notes"><p>This is a thing</p><p>Not all attacks rely only on technical capabilities</p></aside>
 </section>
 
 
-<section title="Slide 57">
+<section>
     <div><p>People are fallible</p></div>
 
     <aside class="notes"><p>Users can be tricked easily - phishing</p><p>Developers make mistakes</p><p>Privileged users or anyone with higher levels of access are more likely to be targeted</p></aside>
 </section>
 
 
-<section title="Slide 58">
+<section>
     <div><p><a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v%3DbjYhmX_OUQQ"><span>https://www.youtube.com/watch?v=bjYhmX_OUQQ</span></a></p></div>
 
     <aside class="notes"><p>Jessica Clark using crying baby video to get control of a journalist’s account</p></aside>
 </section>
 
 
-<section title="Slide 59" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Chaining vulnerabilities</h1></div>
 
     <aside class="notes"><p>This makes any of these vulnerabilities much more dangerous (and interesting!)</p><p>A vulnerability which on its own would have only a small impact can let you escalate to exploit another one which wouldn’t have been possible on its own</p></aside>
 </section>
 
 
-<section title="Slide 60">
+<section>
     <div><p>Session fixation</p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23session-fixation"><span>http://edgeguides.rubyonrails.org/security.html#session-fixation</span></a></p></div>
 
     <aside class="notes"><p>Instead of trying to get a user’s already-authenticated session cookie, force them to use a session you already have access to and get them to authenticate it for you</p></aside>
 </section>
 
 
-<section title="Slide 61" data-background-image="images/session_fixation.png"
-                                 data-background-repeat="no-repeat"
-                                 data-background-size="16em auto"
-                                 data-background-position="right 2em top">
+<section data-background-image="images/session_fixation.png"
+            data-background-repeat="no-repeat"
+            data-background-size="16em auto"
+            data-background-position="right 2em top">
     <div>
         <p class="code-sample">&lt;script&gt;</p>
         <p class="code-sample" style="width: 16em; word-wrap: break-word;">document.cookie ="_session_id=16d5b78a2a03c8d9";</p>
@@ -440,43 +446,43 @@
 </section>
 
 
-<section title="Slide 62">
+<section>
     <div><p>What other examples can we come up with?</p></div>
 </section>
 
 
-<section title="Slide 63" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Other interesting things</h1></div>
 </section>
 
 
-<section title="Slide 64">
+<section>
     <div><p>Timing attacks</p><p>Draft RFC on same-site cookies</p><p>Twitter credit card thing</p></div>
 
     <aside class="notes"><p><a target="_blank" rel="noreferrer" href="https://twitter.com/ejcx_/status/736187259905396740"><span>https://twitter.com/ejcx_/status/736187259905396740</span></a></p><p><a target="_blank" rel="noreferrer" href="https://tools.ietf.org/html/draft-west-first-party-cookies-07"><span>https://tools.ietf.org/html/draft-west-first-party-cookies-07</span></a></p><p>Supported in Chrome 51: <a target="_blank" rel="noreferrer" href="https://www.chromestatus.com/feature/4672634709082112"><span>https://www.chromestatus.com/feature/4672634709082112</span></a></p><p><a target="_blank" rel="noreferrer" href="https://hackerone.com/reports/27404"><span>https://hackerone.com/reports/27404</span></a><span> (thanks David for pointing this out)</span></p></aside>
 </section>
 
 
-<section title="Slide 65" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Further reading</h1></div>
 </section>
 
 
-<section title="Slide 66">
+<section>
     <div><p><a target="_blank" rel="noreferrer" href="https://www.happybearsoftware.com/lrug-web-app-security-talk"><span>Najaf Ali’s LRUG talk</span></a></p><p><a target="_blank" rel="noreferrer" href="https://www.owasp.org/index.php/Top_10_2013-Top_10"><span>OWASP Top 10</span></a></p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html"><span>Rails security guide</span></a></p><p>netstat, ngrep, <a target="_blank" rel="noreferrer" href="http://jvns.ca/blog/2016/03/17/tcpdump-is-amazing/"><span>tcpdump</span></a>, wireshark</p><p><a target="_blank" rel="noreferrer" href="http://jvns.ca/"><span>Julia Evans’ blog</span></a></p><p><a target="_blank" rel="noreferrer" href="https://www.hacksplaining.com"><span>www.hacksplaining.com</span></a></p></div>
 </section>
 
 
-<section title="Slide 67" class="heading" data-background-color="#0076c0">
+<section class="heading" data-background-color="#0076c0">
     <div><h1>Retrospective</h1></div>
 </section>
 
 
-<section title="Slide 68" class="outro"
-                          data-background-image="images/cabinet-office-logo.png"
-                          data-background-repeat="no-repeat"
-                          data-background-size="auto auto"
-                          data-background-position="1.8em 3.2em">
+<section class="outro"
+            data-background-image="images/cabinet-office-logo.png"
+            data-background-repeat="no-repeat"
+            data-background-size="auto auto"
+            data-background-position="1.8em 3.2em">
     <p><strong>Thanks!</strong></p>
     <p>Jenny Duckett and Alex Muller</p>
     <p>@jenny_duckett, @alexmuller</p>
