@@ -44,14 +44,21 @@
 <section>
     <div><p>This is an alpha</p></div>
 
-    <aside class="notes"><p>(so alpha it doesn’t even have a banner)</p><p>This is our first attempt at running a security workshop, so there’ll be lots which could be better - please ask lots of questions and give us feedback at any time</p><p>There’ll be a mini-retro at the end of the day to focus on this</p><p>Help us make the next one better!</p></aside>
+    <aside class="notes">
+        <p>(so alpha it doesn’t even have a banner)</p>
+        <p>This is our first attempt at running a security workshop, so there’ll be lots which could be better - please ask lots of questions and give us feedback at any time</p>
+        <p>There’ll be a mini-retro at the end of the day to focus on this</p>
+        <p>Help us make the next one better!</p>
+    </aside>
 </section>
 
 
 <section>
     <div><p>Lots of us are new to GDS and we don’t all know each other yet...</p></div>
 
-    <aside class="notes"><p>Get everyone to introduce themselves</p></aside>
+    <aside class="notes">
+        <p>Get everyone to introduce themselves</p>
+    </aside>
 </section>
 
 
@@ -63,7 +70,11 @@
 <section>
     <div><p>Timings</p></div>
 
-    <aside class="notes"><p>Mid-morning and mid-afternoon breaks, and lunch obvs</p><p>Mini-retro 20-30 mins at the end of the day</p><p>We’re aiming to spend lots of time on practical exercises, so if we’re talking too much then please tell us :)</p></aside>
+    <aside class="notes">
+        <p>Mid-morning and mid-afternoon breaks, and lunch obvs</p>
+        <p>Mini-retro 20-30 mins at the end of the day</p>
+        <p>We’re aiming to spend lots of time on practical exercises, so if we’re talking too much then please tell us :)</p>
+    </aside>
 </section>
 
 
@@ -73,7 +84,11 @@
         <p class="long-text"><a target="_blank" rel="noreferrer" href="https://github.com/alphagov/railsgoat/tree/virtualbox"><span>https://github.com/alphagov/railsgoat/tree/virtualbox</span></a></p>
     </div>
 
-    <aside class="notes"><p>Fix the vulnerabilities to make the tests pass</p><p>We’ll be using it for most of the practical sessions today, and there’s lots more to explore in it</p><p>We’ve forked it and we’re using our virtualbox branch</p></aside>
+    <aside class="notes">
+        <p>Fix the vulnerabilities to make the tests pass</p>
+        <p>We’ll be using it for most of the practical sessions today, and there’s lots more to explore in it</p>
+        <p>We’ve forked it and we’re using our virtualbox branch</p>
+    </aside>
 </section>
 
 
@@ -85,7 +100,9 @@
 <section>
     <div><p>What do we mean by web security?</p><p>What are the risks and possible consequences?</p></div>
 
-    <aside class="notes"><p>Discuss with the people on your table for a couple of minutes, then all together</p></aside>
+    <aside class="notes">
+        <p>Discuss with the people on your table for a couple of minutes, then all together</p>
+    </aside>
 </section>
 
 
@@ -115,7 +132,11 @@
         </ul>
     </div>
 
-    <aside class="notes"><p>As we said, we aren’t experts, but we find these helpful for thinking about security</p><p>These are really high level</p><p>We’ll talk about these in more detail</p></aside>
+    <aside class="notes">
+        <p>As we said, we aren’t experts, but we find these helpful for thinking about security</p>
+        <p>These are really high level</p>
+        <p>We’ll talk about these in more detail</p>
+    </aside>
 </section>
 
 
@@ -127,7 +148,13 @@
 <section class="heading" data-background-color="#0076c0">
     <div><h1>Servers</h1></div>
 
-    <aside class="notes"><p>We’re dividing the day into two broad categories of stuff:</p><ul><li value="1">Morning: things that happen on servers</li><li value="2">Afternoon: things that happen in browsers</li></ul></aside>
+    <aside class="notes">
+        <p>We’re dividing the day into two broad categories of stuff:</p>
+        <ul>
+            <li value="1">Morning: things that happen on servers</li>
+            <li value="2">Afternoon: things that happen in browsers</li>
+        </ul>
+    </aside>
 </section>
 
 
@@ -148,7 +175,9 @@
     </div>
     <img src="images/xkcd-327-exploits_of_a_mom.png" style="margin-bottom: 5em; border: 0; width: 80%">
 
-    <aside class="notes"><p><a target="_blank" rel="noreferrer" href="https://xkcd.com/327/"><span>https://xkcd.com/327/</span></a></p></aside>
+    <aside class="notes">
+        <p><a target="_blank" rel="noreferrer" href="https://xkcd.com/327/"><span>https://xkcd.com/327/</span></a></p>
+    </aside>
 </section>
 
 
@@ -166,7 +195,13 @@
         </ul>
     </div>
 
-    <aside class="notes"><p>SQL injection with Railsgoat: analytics page, as admin - try to get a list of all the users: http://localhost:3000/admin/1/analytics?ip=FOO&amp;field[*%20FROM%20users--]=true</p><p>Prevention: understand what Rails does against SQL injection and how to use it right, eg where with params or a string</p><p>Tools eg brakeman can help, but unless you’re running it regularly and seeing the output it doesn’t help…</p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23sql-injection"><span>http://edgeguides.rubyonrails.org/security.html#sql-injection</span></a></p></aside>
+    <aside class="notes">
+        <p>SQL injection with Railsgoat: analytics page, as admin - try to get a list of all the users: http://localhost:3000/admin/1/analytics?ip=FOO&amp;field[*%20FROM%20users--]=true</p>
+        <p>Prevention: understand what Rails does against SQL injection and how to use it right, eg where with params or a string</p>
+        <p>Tools eg brakeman can help, but unless you’re running it regularly and seeing the output it doesn’t help…</p>
+        <p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23sql-injection"><span>http://edgeguides.rubyonrails.org/security.html#sql-injection</span></a>
+        </p>
+    </aside>
 </section>
 
 
@@ -177,28 +212,35 @@
     <div style="width: 18em;"><p class="long-text">“We had thousands of hits in the first 15 minutes. We were at the top of hacker news, which a lot of people see. We were getting the word out on something tragickally simple to exploit. We'd do it again.”</p>
     <p class="long-text">https://imagetragick.com</p></div>
 
-    <aside class="notes"><p>Few people took any notice of the first announcement until they made the website - name and logo were a joke originally but they immediately made it much more distinctive</p><p>People need to know a vulnerability exists before they can patch it, and marketing helps that</p></aside>
+    <aside class="notes">
+        <p>Few people took any notice of the first announcement until they made the website - name and logo were a joke originally but they immediately made it much more distinctive</p>
+        <p>People need to know a vulnerability exists before they can patch it, and marketing helps that</p>
+    </aside>
 </section>
 
 
 <section class="heading" data-background-color="#0076c0">
     <div><h1>Authenticating users</h1></div>
 
-    <aside class="notes"><p>If you want to play along with the demo in a few minutes, download the password-related files from the raspberry pi</p></aside>
+    <aside class="notes">
+        <p>If you want to play along with the demo in a few minutes, download the password-related files from the raspberry pi</p>
+    </aside>
 </section>
 
 
 <section>
     <div><p>Don’t build it yourself</p><p>(but the alternatives aren’t perfect either)</p></div>
 
-    <aside class="notes"><p>Crack an MD5 password</p><p>Discuss difference between hashing and encryption?</p><p>Salting passwords? What are you trying to gain by doing this? (time)</p></aside>
+    <aside class="notes">
+        <p>Crack an MD5 password</p>
+        <p>Discuss difference between hashing and encryption?</p>
+        <p>Salting passwords? What are you trying to gain by doing this? (time)</p>
+    </aside>
 </section>
 
 
 <section>
     <div><p>Hash passwords before storing them in your database</p><p>MD5, SHA-512, bcrypt</p></div>
-
-    <aside class="notes"><p>Crack an MD5 password</p><p>Discuss difference between hashing and encryption?</p><p>Salting passwords? What are you trying to gain by doing this? (time)</p></aside>
 </section>
 
 
@@ -211,14 +253,23 @@
         <p class="code-sample">./hashcat-cli64.app /tmp/hash.txt rockyou.txt</p>
     </div>
 
-    <aside class="notes"><p>Crack an MD5 password</p><p>Discuss difference between hashing and encryption?</p><p>Salting passwords? What are you trying to gain by doing this? (time)</p></aside>
+    <aside class="notes">
+        <p>Crack an MD5 password</p>
+        <p>Discuss difference between hashing and encryption?</p>
+        <p>Salting passwords? What are you trying to gain by doing this? (time)</p>
+    </aside>
 </section>
 
 
 <section>
     <div><p>Devise session bug</p></div>
 
-    <aside class="notes"><p>Managing expiry of sessions is hard</p><p>There’s a lot of state to manage across many different actions that users can take - complex</p><p>When users report issues with authentication systems, take it seriously</p><p>Devise as an example of why you should keep dependencies up-to-date - most other things we’re talking about are possible via this vector</p></aside>
+    <aside class="notes">
+        <p>Managing expiry of sessions is hard</p>
+        <p>There’s a lot of state to manage across many different actions that users can take - complex</p>
+        <p>When users report issues with authentication systems, take it seriously</p>
+        <p>Devise as an example of why you should keep dependencies up-to-date - most other things we’re talking about are possible via this vector</p>
+    </aside>
 </section>
 
 
@@ -230,21 +281,38 @@
 <section>
     <div><p>HTTP is stateless</p></div>
 
-    <aside class="notes"><p>Every request is entirely independent. There’s no such thing as being “authenticated” with HTTP. That’s what cookies are.</p></aside>
+    <aside class="notes">
+        <p>Every request is entirely independent. There’s no such thing as being “authenticated” with HTTP. That’s what cookies are.</p>
+    </aside>
 </section>
 
 
 <section>
     <div><p>Changing params</p><p>Hiding a button isn’t enough</p></div>
 
-    <aside class="notes"><p>Direct object references</p><p>Missing function-level access control</p><p>Specialist Publisher authorisation to publish manuals</p></aside>
+    <aside class="notes">
+        <p>Direct object references</p>
+        <p>Missing function-level access control</p>
+        <p>Specialist Publisher authorisation to publish manuals</p>
+    </aside>
 </section>
 
 
 <section>
     <div><p>Demo: authorisation to publish manuals in Specialist Publisher</p></div>
 
-    <aside class="notes"><p>See traffic to publishing-api port in dev VM:</p><p>sudo ngrep -d lo . tcp port 3093</p><p>Before the fix:</p><p>git checkout 8fd0286eef97ec2db3cc789082f7a8a6cee78f1a</p><p>Demo after the fix in integration:</p><p><a target="_blank" rel="noreferrer" href="https://specialist-publisher.integration.publishing.service.gov.uk/manuals/2606097c-e82a-4f5d-920a-5f360dcff626"><span>https://specialist-publisher.integration.publishing.service.gov.uk/manuals/2606097c-e82a-4f5d-920a-5f360dcff626</span></a></p><p>Edit HTML to add Publish form</p><p>Get authenticity token out of another form on the same page</p><p>(With the fix:)</p><p>git checkout ee1f44dcbeec31f471ade4e05366a3d14215b320</p></aside>
+    <aside class="notes">
+        <p>See traffic to publishing-api port in dev VM:</p>
+        <p>sudo ngrep -d lo . tcp port 3093</p>
+        <p>Before the fix:</p>
+        <p>git checkout 8fd0286eef97ec2db3cc789082f7a8a6cee78f1a</p>
+        <p>Demo after the fix in integration:</p>
+        <p><a target="_blank" rel="noreferrer" href="https://specialist-publisher.integration.publishing.service.gov.uk/manuals/2606097c-e82a-4f5d-920a-5f360dcff626"><span>https://specialist-publisher.integration.publishing.service.gov.uk/manuals/2606097c-e82a-4f5d-920a-5f360dcff626</span></a></p>
+        <p>Edit HTML to add Publish form</p>
+        <p>Get authenticity token out of another form on the same page</p>
+        <p>(With the fix:)</p>
+        <p>git checkout ee1f44dcbeec31f471ade4e05366a3d14215b320</p>
+    </aside>
 </section>
 
 
@@ -253,7 +321,9 @@
             data-background-size="contain"
             data-background-color="white">
 
-    <aside class="notes">https://github.com/alphagov/specialist-publisher/pull/444</aside>
+    <aside class="notes">
+        https://github.com/alphagov/specialist-publisher/pull/444
+    </aside>
 </section>
 
 
@@ -262,7 +332,16 @@
 
     <aside class="notes">
         https://twitter.com/edent/status/732889877705072640
-        <p>Open redirects - @edent</p><p><a target="_blank" rel="noreferrer" href="http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/147530/"><span>http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/147530/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/118376/"><span>http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/118376/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115473/"><span>http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115473/</span></a></p><p><a target="_blank" rel="noreferrer" href="http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115469/"><span>http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115469/</span></a></p><p>Bypassing spam filters in emails to send people to a different site that might have another vulnerability</p><p>Real use-case of redirect from query params: <a target="_blank" rel="noreferrer" href="https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8%3D%25E2%259C%2593%26type%3Darchive%26path_contains%3Dhtm"><span>https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8=%E2%9C%93&amp;type=archive&amp;path_contains=htm</span></a></p><p>Unvalidated redirect in Railsgoat admin login - fix it</p><p>Rails doesn’t help you with this!</p></aside>
+        <p>Open redirects - @edent</p>
+        <p><a target="_blank" rel="noreferrer" href="http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/147530/"><span>http://www.wealden.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/147530/</span></a></p>
+        <p><a target="_blank" rel="noreferrer" href="http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/118376/"><span>http://www.henley.ac.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/118376/</span></a></p>
+        <p><a target="_blank" rel="noreferrer" href="http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115473/"><span>http://sxldev.renfrewshire.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115473/</span></a></p>
+        <p><a target="_blank" rel="noreferrer" href="http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL%3Dhttps://www.openbugbounty.org/incidents/115469/"><span>http://www.sps.gov.uk/nmsruntime/logLink.aspx?linkURL=https://www.openbugbounty.org/incidents/115469/</span></a></p>
+        <p>Bypassing spam filters in emails to send people to a different site that might have another vulnerability</p>
+        <p>Real use-case of redirect from query params: <a target="_blank" rel="noreferrer" href="https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8%3D%25E2%259C%2593%26type%3Darchive%26path_contains%3Dhtm"><span>https://transition.integration.publishing.service.gov.uk/sites/aaib/mappings?utf8=%E2%9C%93&amp;type=archive&amp;path_contains=htm</span></a></p>
+        <p>Unvalidated redirect in Railsgoat admin login - fix it</p>
+        <p>Rails doesn’t help you with this!</p>
+    </aside>
 </section>
 
 
@@ -295,7 +374,8 @@
             data-background-image="images/signon-errbit.png">
 
     <aside class="notes">
-        <p>Most GOV.UK applications log exceptions to Errbit, along with lots of information about the request to help us debug problems</p><p>That includes the params, which for signon can include passwords and 2SV codes - the code is filtered here</p>
+        <p>Most GOV.UK applications log exceptions to Errbit, along with lots of information about the request to help us debug problems</p>
+        <p>That includes the params, which for signon can include passwords and 2SV codes - the code is filtered here</p>
     </aside>
 </section>
 
@@ -307,7 +387,8 @@
 
     <aside class="notes">
         https://github.gds/gds/alphagov-deployment/pull/920
-        <p>Airbrake (the gem which apps use to interact with Errbit) filters params named password and password_confirmation by default, but Devise also uses current_password when your password expires and you have to reset it</p><p>If the reset fails the old one might still valid enough to allow someone else to log in, and it will have been sent to Errbit unless you add it to params_filters</p>
+        <p>Airbrake (the gem which apps use to interact with Errbit) filters params named password and password_confirmation by default, but Devise also uses current_password when your password expires and you have to reset it</p>
+        <p>If the reset fails the old one might still valid enough to allow someone else to log in, and it will have been sent to Errbit unless you add it to params_filters</p>
     </aside>
 </section>
 
@@ -325,7 +406,9 @@
         <p><a target="_blank" rel="noreferrer" href="http://dodgy-login.herokuapp.com/"><span>http://dodgy-login.herokuapp.com/</span></a></p>
     </div>
 
-    <aside class="notes"><p>bob demoing tcpdump and wireshark</p></aside>
+    <aside class="notes">
+        <p>bob demoing tcpdump and wireshark</p>
+    </aside>
 </section>
 
 
@@ -351,7 +434,9 @@
         <p class="long-text">From the server’s point of view, the browser is the user</p>
     </div>
 
-    <aside class="notes"><p>The browser is an agent for the user</p></aside>
+    <aside class="notes">
+        <p>The browser is an agent for the user</p>
+    </aside>
 </section>
 
 
@@ -368,7 +453,10 @@
 <section>
     <div><p>It’s useful to think of this as JavaScript injection</p></div>
 
-    <aside class="notes"><p>XSS isn’t the clearest name for this to us</p><p>It covers getting any kind of unintended JS to run in someone else’s browser</p></aside>
+    <aside class="notes">
+        <p>XSS isn’t the clearest name for this to us</p>
+        <p>It covers getting any kind of unintended JS to run in someone else’s browser</p>
+    </aside>
 </section>
 
 
@@ -382,7 +470,10 @@
         <p class="long-text">This happens when you take user input and render it without escaping it correctly</p>
     </div>
 
-    <aside class="notes"><p>Don’t trust user input, remember :)</p><p>Publishing apps could be victims of stored XSS - we have to sanitize input to prevent it</p></aside>
+    <aside class="notes">
+        <p>Don’t trust user input, remember :)</p>
+        <p>Publishing apps could be victims of stored XSS - we have to sanitize input to prevent it</p>
+    </aside>
 </section>
 
 
@@ -393,7 +484,10 @@
         <p class="long-text"><a target="_blank" rel="noreferrer" href="https://www-origin.integration.publishing.service.gov.uk/aaib-reports"><span>https://www-origin.integration.publishing.service.gov.uk/aaib-reports</span></a></p>
     </div>
 
-    <aside class="notes"><p>Deploy old branch temporarily to integration</p><p>Get a bit of actually dangerous JS to use instead of just alert - send cookies to our logging app?</p></aside>
+    <aside class="notes">
+        <p>Deploy old branch temporarily to integration</p>
+        <p>Get a bit of actually dangerous JS to use instead of just alert - send cookies to our logging app?</p>
+    </aside>
 </section>
 
 
@@ -413,7 +507,11 @@
 <section>
     <div><p>Practical: be the victim of a CSRF attack in Railsgoat (and fix it)</p></div>
 
-    <aside class="notes"><p>Log in to railsgoat as a normal user</p><p>Use <a target="_blank" rel="noreferrer" href="http://raspberrypi.local/csrf_form.html"><span>http://raspberrypi.local/csrf_form.html</span></a></p><p>Adds events to user’s calendar</p></aside>
+    <aside class="notes">
+        <p>Log in to railsgoat as a normal user</p>
+        <p>Use <a target="_blank" rel="noreferrer" href="http://raspberrypi.local/csrf_form.html"><span>http://raspberrypi.local/csrf_form.html</span></a></p>
+        <p>Adds events to user’s calendar</p>
+    </aside>
 </section>
 
 
@@ -423,7 +521,10 @@
         <p class="long-text"><a target="_blank" rel="noreferrer" href="http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"><span>http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html</span></a></p>
     </div>
 
-    <aside class="notes"><p>Do HTTP right</p><p>img tags with GET</p></aside>
+    <aside class="notes">
+        <p>Do HTTP right</p>
+        <p>img tags with GET</p>
+    </aside>
 </section>
 
 
@@ -438,7 +539,14 @@
         <p class="long-text">The browser won’t let a site make an HTTP request to another origin unless the site has cross-origin resource sharing (CORS) configured</p>
     </div>
 
-    <aside class="notes"><p>Cookies:</p><ul><li value="1">HttpOnly</li><li value="2">Secure</li><li value="3">SameSite (draft RFC)</li></ul></aside>
+    <aside class="notes">
+        <p>Cookies:</p>
+        <ul>
+            <li value="1">HttpOnly</li>
+            <li value="2">Secure</li>
+            <li value="3">SameSite (draft RFC)</li>
+        </ul>
+    </aside>
 </section>
 
 
@@ -469,35 +577,49 @@
 <section class="heading" data-background-color="#0076c0">
     <div><h1>Social engineering</h1></div>
 
-    <aside class="notes"><p>This is a thing</p><p>Not all attacks rely only on technical capabilities</p></aside>
+    <aside class="notes">
+        <p>This is a thing</p>
+        <p>Not all attacks rely only on technical capabilities</p>
+    </aside>
 </section>
 
 
 <section>
     <div><p>People are fallible</p></div>
 
-    <aside class="notes"><p>Users can be tricked easily - phishing</p><p>Developers make mistakes</p><p>Privileged users or anyone with higher levels of access are more likely to be targeted</p></aside>
+    <aside class="notes">
+        <p>Users can be tricked easily - phishing</p>
+        <p>Developers make mistakes</p>
+        <p>Privileged users or anyone with higher levels of access are more likely to be targeted</p>
+    </aside>
 </section>
 
 
 <section>
     <div><p><a target="_blank" rel="noreferrer" href="https://www.youtube.com/watch?v%3DbjYhmX_OUQQ"><span>https://www.youtube.com/watch?v=bjYhmX_OUQQ</span></a></p></div>
 
-    <aside class="notes"><p>Jessica Clark using crying baby video to get control of a journalist’s account</p></aside>
+    <aside class="notes">
+        <p>Jessica Clark using crying baby video to get control of a journalist’s account</p>
+    </aside>
 </section>
 
 
 <section class="heading" data-background-color="#0076c0">
     <div><h1>Chaining vulnerabilities</h1></div>
 
-    <aside class="notes"><p>This makes any of these vulnerabilities much more dangerous (and interesting!)</p><p>A vulnerability which on its own would have only a small impact can let you escalate to exploit another one which wouldn’t have been possible on its own</p></aside>
+    <aside class="notes">
+        <p>This makes any of these vulnerabilities much more dangerous (and interesting!)</p>
+        <p>A vulnerability which on its own would have only a small impact can let you escalate to exploit another one which wouldn’t have been possible on its own</p>
+    </aside>
 </section>
 
 
 <section>
     <div><p>Session fixation</p><p><a target="_blank" rel="noreferrer" href="http://edgeguides.rubyonrails.org/security.html%23session-fixation"><span>http://edgeguides.rubyonrails.org/security.html#session-fixation</span></a></p></div>
 
-    <aside class="notes"><p>Instead of trying to get a user’s already-authenticated session cookie, force them to use a session you already have access to and get them to authenticate it for you</p></aside>
+    <aside class="notes">
+        <p>Instead of trying to get a user’s already-authenticated session cookie, force them to use a session you already have access to and get them to authenticate it for you</p>
+    </aside>
 </section>
 
 
@@ -511,7 +633,11 @@
         <p class="code-sample">&lt;/script&gt;</p>
     </div>
 
-    <aside class="notes"><p>The “XSS” to fix the session doesn’t rely on cross-site requests - just setting the cookie for the current page, JS injection</p><p>The mitigation for this is to expire the user’s session when they login and logout and give them a new session, which the attacker doesn’t have access to - Devise does this for you</p><p>Also you can delete sessions from the database a short time after they were created - this gives the attacker less time to exploit the attack</p></aside>
+    <aside class="notes">
+        <p>The “XSS” to fix the session doesn’t rely on cross-site requests - just setting the cookie for the current page, JS injection</p>
+        <p>The mitigation for this is to expire the user’s session when they login and logout and give them a new session, which the attacker doesn’t have access to - Devise does this for you</p>
+        <p>Also you can delete sessions from the database a short time after they were created - this gives the attacker less time to exploit the attack</p>
+    </aside>
 </section>
 
 
@@ -528,7 +654,12 @@
 <section>
     <div><p>Timing attacks</p><p>Draft RFC on same-site cookies</p><p>Twitter credit card thing</p></div>
 
-    <aside class="notes"><p><a target="_blank" rel="noreferrer" href="https://twitter.com/ejcx_/status/736187259905396740"><span>https://twitter.com/ejcx_/status/736187259905396740</span></a></p><p><a target="_blank" rel="noreferrer" href="https://tools.ietf.org/html/draft-west-first-party-cookies-07"><span>https://tools.ietf.org/html/draft-west-first-party-cookies-07</span></a></p><p>Supported in Chrome 51: <a target="_blank" rel="noreferrer" href="https://www.chromestatus.com/feature/4672634709082112"><span>https://www.chromestatus.com/feature/4672634709082112</span></a></p><p><a target="_blank" rel="noreferrer" href="https://hackerone.com/reports/27404"><span>https://hackerone.com/reports/27404</span></a><span> (thanks David for pointing this out)</span></p></aside>
+    <aside class="notes">
+        <p><a target="_blank" rel="noreferrer" href="https://twitter.com/ejcx_/status/736187259905396740"><span>https://twitter.com/ejcx_/status/736187259905396740</span></a></p>
+        <p><a target="_blank" rel="noreferrer" href="https://tools.ietf.org/html/draft-west-first-party-cookies-07"><span>https://tools.ietf.org/html/draft-west-first-party-cookies-07</span></a></p>
+        <p>Supported in Chrome 51: <a target="_blank" rel="noreferrer" href="https://www.chromestatus.com/feature/4672634709082112"><span>https://www.chromestatus.com/feature/4672634709082112</span></a></p>
+        <p><a target="_blank" rel="noreferrer" href="https://hackerone.com/reports/27404"><span>https://hackerone.com/reports/27404</span></a><span> (thanks David for pointing this out)</span></p>
+    </aside>
 </section>
 
 
